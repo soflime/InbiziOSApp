@@ -1,0 +1,42 @@
+
+{
+    "product":[
+    {
+        "productId": 2,
+        "productName": "Washing Machine",
+        "productCompanyName": "LG",
+        "productPrice": 24000,
+        "productFollowerCount": 1,
+        "productCategory": "Washing Machine",
+        "productDimension": "7kg",
+        "productMaterial": "Top Load",
+        "productDescription": "jjhsajdh hasdjhjhasd",
+        "userName": "ashiq"
+    },
+    {
+        "productId": 11,
+        "productName": "ddd",
+        "productCompanyName": "LG",
+        "productPrice": 200,
+        "productFollowerCount": 0,
+        "productCategory": "productCategory",
+        "productDimension": null,
+        "productMaterial": null,
+        "productDescription": "productSpecification",
+        "userName": "Ravi"
+    },
+    {
+        "productId": 12,
+        "productName": "ddd",
+        "productCompanyName": null,
+        "productPrice": 200,
+        "productFollowerCount": 0,
+        "productCategory": "productCategory",
+        "productDimension": null,
+        "productMaterial": null,
+        "productDescription": "productSpecification",
+        "userName": "Ravi"
+    }
+]
+}
+

@@ -1,0 +1,14 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+# Pods for InBizDemo
+  target :'InBizDemo' do
+    use_frameworks!
+    
+    pod 'ReachabilitySwift'
+    pod 'Alamofire', '~> 4.2'
+    pod 'Toast-Swift', '~> 4.2'
+    pod 'SwiftyJSON'
+       
+
+end
