@@ -10,10 +10,14 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    let CellId = "Cell"
+    
+//    @IBOutlet weak var productDetailsTableView: UITableView!
     @IBOutlet weak var txtProductName: UILabel!
     @IBOutlet weak var txtProductCategory: UILabel!
     @IBOutlet weak var txtViewProductSpecification: UITextView!
     
+    @IBOutlet weak var productSpacificationLbl: UILabel!
     var strImageName: String!
     var productName: String!
     var productCategory: String!
@@ -25,11 +29,26 @@ class DetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        txtProductName.text = "Product Name:  \(productName ?? "")"
-        txtProductCategory.text = "Product Category:  \(productCategory ?? "")"
-        txtViewProductSpecification.text = "\(productSpecification ?? "")"
+//        txtProductName.text = "Product Name:  \(productName ?? "")"
+//        txtProductCategory.text = "Product Category:  \(productCategory ?? "")"
+//        txtViewProductSpecification.text = "\(productSpecification ?? "")"
+ //       txtViewProductSpecification.text = "\(productSpecification ?? "")"
 
-        // Do any additional setup after loading the view.
+        txtProductName.text = productName ?? ""
+        txtProductCategory.text = productCategory ?? ""
+//        txtViewProductSpecification.text = "\(productSpecification ?? "")"
+        productSpacificationLbl.text = productSpecification ?? ""
+
+//        productDetailsTableView.register(UITableViewCell.self, forCellReuseIdentifier: CellId)
+        
+        // Register cell
+//        productDetailsTableView.register(UINib.init(nibName: CellId, bundle: nil), forCellReuseIdentifier: CellId)
+//        productDetailsTableView.rowHeight = UITableView.automaticDimension
+//        productDetailsTableView.separatorColor = UIColor.clear
+        
+//        productDetailsTableView.delegate = self
+//        productDetailsTableView.dataSource = self
+
     }
    
     @IBAction func backButtonPressed(_ sender: Any) {
@@ -38,3 +57,21 @@ class DetailViewController: UIViewController {
     }
     
 }
+
+//extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
+//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        return 2
+//    }
+//
+//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DetailViewTableViewCell
+//        cell.placeHolderLbl!.text = "asas"
+////        cell.placeHolderLbl.text = "placcc"
+////        cell.valueLbl.text = "This is sample value"
+//        return cell
+//
+//
+//    }
+//
+//
+//}

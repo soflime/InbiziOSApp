@@ -188,7 +188,14 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         nextViewController.productSpecification = productListAarry[indexPath.row]["productDescription"] as? String
         nextViewController.productCategory = productListAarry[indexPath.row]["productCategory"] as? String
         
-        self.present(nextViewController, animated: true, completion: nil)
+//        self.present(nextViewController, animated: true, completion: nil)
+//        func show(_ vc: UIViewController,
+//        sender: Any?)
+//
+//        self.show(nextViewController,)
+        
+        self.show(nextViewController, sender: self)
+        
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?)

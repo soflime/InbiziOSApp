@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Detail View Controller-->
+        <!--Product Details-->
         <scene sceneID="9JQ-qy-thB">
             <objects>
                 <viewController storyboardIdentifier="DetailViewController" id="SL6-Cn-ynd" customClass="DetailViewController" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
@@ -16,43 +16,50 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Sh-YG-a9i">
-                                <rect key="frame" x="16" y="40" width="67" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Back"/>
-                                <connections>
-                                    <action selector="backButtonPressed:" destination="SL6-Cn-ynd" eventType="touchUpInside" id="as2-qQ-shz"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ProductName:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4oX-0V-MUF">
-                                <rect key="frame" x="16" y="106" width="343" height="21"/>
+                                <rect key="frame" x="210" y="82" width="149" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ProductCategory:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89N-ID-8cM">
-                                <rect key="frame" x="16" y="140" width="343" height="21"/>
+                                <rect key="frame" x="210" y="117" width="149" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="desc" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bEO-vc-mvk">
+                                <rect key="frame" x="22" y="175" width="337" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ProductDescrption:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8qz-MK-Yzh">
-                                <rect key="frame" x="16" y="175" width="343" height="21"/>
+                                <rect key="frame" x="22" y="151" width="343" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Product Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5SU-Q8-JXx">
-                                <rect key="frame" x="118" y="52" width="192" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ProductName:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="plY-St-pTx">
+                                <rect key="frame" x="22" y="82" width="144" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-Rr-3DQ">
-                                <rect key="frame" x="16" y="204" width="343" height="128"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="ProductCategory:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kMx-bn-yjx">
+                                <rect key="frame" x="22" y="117" width="144" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Helvetica-Light" family="Helvetica" pointSize="18"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="g1B-Rr-3DQ">
+                                <rect key="frame" x="16" y="261" width="343" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
@@ -61,41 +68,42 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.19607843137254902" green="0.58431372549019611" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="JMM-Vm-0Ib"/>
                     </view>
+                    <navigationItem key="navigationItem" title="Product Details" id="3ss-4n-3Sv"/>
                     <connections>
+                        <outlet property="productSpacificationLbl" destination="bEO-vc-mvk" id="DLJ-HG-KnD"/>
                         <outlet property="txtProductCategory" destination="89N-ID-8cM" id="8Gt-fC-4ng"/>
                         <outlet property="txtProductName" destination="4oX-0V-MUF" id="ohe-tz-4Zf"/>
-                        <outlet property="txtViewProductSpecification" destination="g1B-Rr-3DQ" id="dbC-zq-wiE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZMk-al-JNb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1552.8" y="-1022.3388305847077"/>
+            <point key="canvasLocation" x="4492" y="-1294.0029985007498"/>
         </scene>
         <!--Home-->
         <scene sceneID="tbv-Sd-ne0">
             <objects>
                 <viewController storyboardIdentifier="Home" title="Home" modalPresentationStyle="fullScreen" id="PMB-ZL-TiI" customClass="HomeViewController" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bmS-Wo-Goe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="bmS-Wo-Goe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Iui-Dp-5lc">
+                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iui-Dp-5lc">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
                                 <color key="backgroundColor" red="0.1080407728" green="0.58067381139999996" blue="0.98815981220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </scrollView>
-                            <pageControl hidden="YES" contentMode="scaleToFill" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="hBI-dK-GAJ">
+                            <pageControl hidden="YES" contentMode="scaleToFill" ambiguous="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="hBI-dK-GAJ">
                                 <rect key="frame" x="160" y="0.0" width="55" height="37"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </pageControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-8l-W81">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="510"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-8l-W81">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="609"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <prototypes>
@@ -107,38 +115,40 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Product Name: Samsung TV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tmY-i0-3xm">
-                                                    <rect key="frame" x="25" y="16" width="345" height="45"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="25" y="16" width="345" height="43"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" restorationIdentifier="lbl2" text="Product Category:Electronics/TV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRO-BQ-z9v">
-                                                    <rect key="frame" x="25" y="68" width="345" height="21"/>
+                                                    <rect key="frame" x="25" y="66" width="345" height="21.5"/>
                                                     <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Price Per Unit: 100$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="geT-T0-Vic">
-                                                    <rect key="frame" x="25" y="125.5" width="345" height="20.5"/>
+                                                    <rect key="frame" x="25" y="124.5" width="345" height="21.5"/>
                                                     <rect key="contentStretch" x="0.29999999999999999" y="0.0" width="1" height="1"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Prouct Specificatin: 32 inch LED" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ikL-Ec-323">
-                                                    <rect key="frame" x="25" y="96" width="345" height="21"/>
+                                                    <rect key="frame" x="25" y="94.5" width="345" height="21.5"/>
                                                     <rect key="contentStretch" x="0.25" y="0.0" width="1" height="1"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="18"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Rt-Ib-Y2n">
                                                     <rect key="frame" x="25" y="151" width="52" height="25"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <state key="normal" title="Follows"/>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lu-bQ-Zcf">
                                                     <rect key="frame" x="311" y="148.5" width="44" height="30"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="15"/>
                                                     <state key="normal" title="Follow">
                                                         <color key="titleColor" red="0.1080407728" green="0.58067381139999996" blue="0.98815981220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
@@ -192,12 +202,12 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qub-1d-bEV">
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qub-1d-bEV">
                                 <rect key="frame" x="275" y="617" width="90" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="90" id="PsP-T8-npk"/>
-                                    <constraint firstAttribute="height" constant="40" id="X0a-ig-FyL"/>
+                                    <constraint firstAttribute="width" constant="90" id="6L7-Wf-Sgg"/>
+                                    <constraint firstAttribute="height" constant="40" id="Npd-Fz-bCK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <state key="normal" title="Post">
@@ -211,11 +221,12 @@
                         <color key="backgroundColor" red="0.1080407728" green="0.58067381139999996" blue="0.98815981220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="hBI-dK-GAJ" firstAttribute="top" secondItem="Iui-Dp-5lc" secondAttribute="bottom" id="4so-KD-izu"/>
+                            <constraint firstItem="qub-1d-bEV" firstAttribute="top" secondItem="VGl-8l-W81" secondAttribute="bottom" constant="8" id="8Qb-UV-RdS"/>
                             <constraint firstItem="Iui-Dp-5lc" firstAttribute="trailing" secondItem="VqF-6e-T39" secondAttribute="trailing" id="EyU-rH-w8D"/>
                             <constraint firstItem="VGl-8l-W81" firstAttribute="top" secondItem="Iui-Dp-5lc" secondAttribute="bottom" id="IC5-wt-227"/>
                             <constraint firstItem="VGl-8l-W81" firstAttribute="trailing" secondItem="VqF-6e-T39" secondAttribute="trailing" id="SOu-15-NWG"/>
+                            <constraint firstAttribute="bottom" secondItem="qub-1d-bEV" secondAttribute="bottom" constant="5" id="TGs-wc-zMO"/>
                             <constraint firstItem="VGl-8l-W81" firstAttribute="leading" secondItem="VqF-6e-T39" secondAttribute="leading" id="Tgj-z1-Zme"/>
-                            <constraint firstItem="qub-1d-bEV" firstAttribute="bottom" secondItem="VqF-6e-T39" secondAttribute="bottom" constant="-10" id="Vad-1c-nQy"/>
                             <constraint firstItem="VGl-8l-W81" firstAttribute="top" secondItem="Iui-Dp-5lc" secondAttribute="bottom" id="X7e-o1-N5y"/>
                             <constraint firstItem="VGl-8l-W81" firstAttribute="top" secondItem="Iui-Dp-5lc" secondAttribute="bottom" id="YCf-Rv-kX1"/>
                             <constraint firstItem="Iui-Dp-5lc" firstAttribute="top" secondItem="bmS-Wo-Goe" secondAttribute="top" id="emP-cQ-iUN"/>
@@ -223,7 +234,7 @@
                             <constraint firstItem="Iui-Dp-5lc" firstAttribute="leading" secondItem="VqF-6e-T39" secondAttribute="leading" id="ojh-2p-RnE"/>
                             <constraint firstItem="VGl-8l-W81" firstAttribute="height" secondItem="bmS-Wo-Goe" secondAttribute="height" multiplier="5:10" constant="176.5" id="ptb-G8-eN9"/>
                             <constraint firstItem="Iui-Dp-5lc" firstAttribute="height" secondItem="bmS-Wo-Goe" secondAttribute="height" multiplier="3:10" constant="-200.09999999999999" id="rLK-Al-naF"/>
-                            <constraint firstItem="VqF-6e-T39" firstAttribute="trailing" secondItem="qub-1d-bEV" secondAttribute="trailing" constant="10" id="zUh-Xx-sEE"/>
+                            <constraint firstAttribute="trailing" secondItem="qub-1d-bEV" secondAttribute="trailing" constant="10" id="riP-8M-nWh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VqF-6e-T39"/>
                     </view>
@@ -232,7 +243,7 @@
                             <barButtonItem style="plain" id="KeJ-pp-Rwi"/>
                             <barButtonItem title="Item" id="hJJ-8o-yLM">
                                 <connections>
-                                    <segue destination="jw0-oi-GL5" kind="show" id="thp-VE-Edn"/>
+                                    <segue destination="jw0-oi-GL5" kind="presentation" id="thp-VE-Edn"/>
                                 </connections>
                             </barButtonItem>
                         </leftBarButtonItems>
@@ -248,7 +259,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="WcF-OX-8y7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3553" y="-415"/>
+            <point key="canvasLocation" x="4492" y="-415.14242878560725"/>
         </scene>
         <!--PostForm-->
         <scene sceneID="pbm-nq-35R">
@@ -351,18 +362,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciJ-Mw-0vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4698" y="425"/>
+            <point key="canvasLocation" x="3719" y="885"/>
         </scene>
         <!--Login-->
         <scene sceneID="wg7-f3-ORb">
             <objects>
                 <viewController storyboardIdentifier="Login" title="Login" id="8rJ-Kc-sve" customClass="LoginViewController" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlV-NT-VXM">
-                                <rect key="frame" x="36" y="403" width="303" height="34"/>
+                                <rect key="frame" x="36" y="307" width="303" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Login">
@@ -374,25 +385,25 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INbiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vc-wN-QJi">
-                                <rect key="frame" x="153" y="175" width="69" height="37"/>
+                                <rect key="frame" x="153" y="79" width="69" height="37"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="31"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="...it pays to be  INbiz!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7G-8A-o3D">
-                                <rect key="frame" x="107.5" y="211" width="160" height="21"/>
+                                <rect key="frame" x="107.5" y="115" width="160" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="userid" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eg3-VP-Mew">
-                                <rect key="frame" x="16" y="284" width="343" height="34"/>
+                                <rect key="frame" x="16" y="188" width="343" height="34"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8C5-x1-J9f">
-                                <rect key="frame" x="107" y="467" width="149" height="34"/>
+                                <rect key="frame" x="107" y="371" width="149" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Forgot password ?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -402,7 +413,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-4g-gvH">
-                                <rect key="frame" x="36" y="608" width="303" height="30"/>
+                                <rect key="frame" x="36" y="588" width="303" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Registered With Us!">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -412,7 +423,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="pwd" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79x-jK-2ku">
-                                <rect key="frame" x="16" y="328" width="343" height="34"/>
+                                <rect key="frame" x="16" y="232" width="343" height="34"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -453,7 +464,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-39.200000000000003" y="-55.322338830584712"/>
+            <point key="canvasLocation" x="1738" y="-55"/>
         </scene>
         <!--Registration-->
         <scene sceneID="bqC-VC-tlE">
@@ -584,11 +595,11 @@
             <objects>
                 <viewController storyboardIdentifier="MyAccount" title="MyAccount" id="1fa-TL-Pbk" customClass="MyAccount" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Yqi-Eo-086">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4K-7C-ZtY">
-                                <rect key="frame" x="0.0" y="82" width="375" height="129"/>
+                                <rect key="frame" x="0.0" y="82" width="375" height="109"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Welcome to InBiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s5Y-zQ-e0x">
                                         <rect key="frame" x="0.0" y="8" width="367" height="21"/>
@@ -646,7 +657,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please sign In to your Account" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9L-A0-2WT">
-                                <rect key="frame" x="72" y="323" width="231" height="21"/>
+                                <rect key="frame" x="72" y="313" width="231" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -674,7 +685,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="M3s-v0-wjv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6222" y="-281"/>
+            <point key="canvasLocation" x="6746" y="-172"/>
         </scene>
         <!--Login-->
         <scene sceneID="1GY-2h-0SV">
@@ -693,7 +704,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gZg-Y1-FNx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-978.39999999999998" y="-55.322338830584712"/>
+            <point key="canvasLocation" x="650" y="-55"/>
         </scene>
         <!--bb-->
         <scene sceneID="nNc-v6-isy">
@@ -702,7 +713,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="bb" id="4s2-54-lTc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GIO-uy-HuT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -712,7 +723,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lO3-dZ-Att" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2596" y="-1.3493253373313345"/>
+            <point key="canvasLocation" x="2924" y="-505"/>
         </scene>
         <!--Side Menu Navigation Controller-->
         <scene sceneID="oVc-yX-tpJ">
@@ -720,6 +731,7 @@
                 <navigationController storyboardIdentifier="LeftMenuNavigationController" navigationBarHidden="YES" id="jw0-oi-GL5" customClass="SideMenuNavigationController" customModule="SideMenu" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="bPC-dP-DrD"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="jbt-xC-K6x">
+                        <rect key="frame" x="0.0" y="-20" width="0.0" height="0.0"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <userDefinedRuntimeAttributes>
@@ -731,14 +743,14 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bvq-Qu-qqh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4391" y="-505"/>
+            <point key="canvasLocation" x="5328.8000000000002" y="-505.09745127436287"/>
         </scene>
         <!--Side Menu Table View Controller-->
         <scene sceneID="tgi-Ew-zqv">
             <objects>
                 <tableViewController id="yzS-c2-Eo3" customClass="SideMenuTableViewController" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="M3y-lN-ob0">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <color key="tintColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -807,6 +819,11 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <segue destination="8rJ-Kc-sve" kind="popoverPresentation" popoverAnchorView="aoY-vu-qXu" id="jAO-2P-IYM">
+                                                <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                            </segue>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -820,11 +837,15 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLn-EJ-ey7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5193" y="-353"/>
+            <point key="canvasLocation" x="4572" y="487"/>
         </scene>
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="thp-VE-Edn"/>
+        <segue reference="jAO-2P-IYM"/>
+    </inferredMetricsTieBreakers>
 </document>

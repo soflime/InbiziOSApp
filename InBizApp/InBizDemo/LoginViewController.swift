@@ -29,6 +29,8 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
         client.delegate = self
         
         
+        
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -37,7 +39,10 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
             UserDefaults.standard.set(false, forKey: "fromRegistration")
             useridField.text = ""
             pwdField.text = ""
+            
         }
+        
+        navigationController?.isNavigationBarHidden = true
         
         
     }
@@ -52,6 +57,7 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Registration") as! RegistrationViewController
         self.present(nextViewController, animated:true, completion:nil)
+        
     }
     
     @IBAction func loginButton(_ sender: Any) {
