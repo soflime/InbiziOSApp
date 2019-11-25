@@ -29,6 +29,7 @@
 		F16A0C532389940700364BCF /* DetailViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A0C512389940700364BCF /* DetailViewTableViewCell.swift */; };
 		F16A0C542389940700364BCF /* DetailViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F16A0C522389940700364BCF /* DetailViewTableViewCell.xib */; };
 		F194E347238AD7860080B106 /* hamburger_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F194E346238AD7850080B106 /* hamburger_icon.png */; };
+		F194E349238B76560080B106 /* EnquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F194E348238B76560080B106 /* EnquiryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		F16A0C512389940700364BCF /* DetailViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewTableViewCell.swift; sourceTree = "<group>"; };
 		F16A0C522389940700364BCF /* DetailViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewTableViewCell.xib; sourceTree = "<group>"; };
 		F194E346238AD7850080B106 /* hamburger_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hamburger_icon.png; path = ../../../Downloads/hamburger_icon.png; sourceTree = "<group>"; };
+		F194E348238B76560080B106 /* EnquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnquiryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				83FE754922F7F7A1002F3E16 /* AppDelegate.swift */,
 				83FE754B22F7F7A1002F3E16 /* ViewController.swift */,
 				83FE754D22F7F7A1002F3E16 /* Main.storyboard */,
+				F194E348238B76560080B106 /* EnquiryViewController.swift */,
 				838EC3E9231AA7C700C8E498 /* HomeViewController.swift */,
 				838EC3EB231AA7E500C8E498 /* LoginViewController.swift */,
 				838EC3FD231AEF8B00C8E498 /* PostFormViewController.swift */,
@@ -282,6 +285,7 @@
 				F16A0C532389940700364BCF /* DetailViewTableViewCell.swift in Sources */,
 				838EC3FA231AA81900C8E498 /* DetailViewController.swift in Sources */,
 				D3D11C98231BE3D900C67F15 /* Utility.swift in Sources */,
+				F194E349238B76560080B106 /* EnquiryViewController.swift in Sources */,
 				D3D11C9C231CFF9300C67F15 /* MyAccount.swift in Sources */,
 				838EC3F1231AA7E500C8E498 /* LoginViewController.swift in Sources */,
 				838EC3EA231AA7C700C8E498 /* HomeViewController.swift in Sources */,
