@@ -30,6 +30,9 @@
 		F16A0C542389940700364BCF /* DetailViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F16A0C522389940700364BCF /* DetailViewTableViewCell.xib */; };
 		F194E347238AD7860080B106 /* hamburger_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F194E346238AD7850080B106 /* hamburger_icon.png */; };
 		F194E349238B76560080B106 /* EnquiryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F194E348238B76560080B106 /* EnquiryViewController.swift */; };
+		F194E34B238B7B130080B106 /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F194E34A238B7B130080B106 /* TableViewCell1.swift */; };
+		F194E34D238B7BEA0080B106 /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F194E34C238B7BEA0080B106 /* TableViewCell2.swift */; };
+		F194E34F238B81030080B106 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F194E34E238B81030080B106 /* TableViewCell3.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +63,9 @@
 		F16A0C522389940700364BCF /* DetailViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewTableViewCell.xib; sourceTree = "<group>"; };
 		F194E346238AD7850080B106 /* hamburger_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hamburger_icon.png; path = ../../../Downloads/hamburger_icon.png; sourceTree = "<group>"; };
 		F194E348238B76560080B106 /* EnquiryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnquiryViewController.swift; sourceTree = "<group>"; };
+		F194E34A238B7B130080B106 /* TableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
+		F194E34C238B7BEA0080B106 /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
+		F194E34E238B81030080B106 /* TableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,9 @@
 				83FE754922F7F7A1002F3E16 /* AppDelegate.swift */,
 				83FE754B22F7F7A1002F3E16 /* ViewController.swift */,
 				83FE754D22F7F7A1002F3E16 /* Main.storyboard */,
+				F194E34E238B81030080B106 /* TableViewCell3.swift */,
+				F194E34C238B7BEA0080B106 /* TableViewCell2.swift */,
+				F194E34A238B7B130080B106 /* TableViewCell1.swift */,
 				F194E348238B76560080B106 /* EnquiryViewController.swift */,
 				838EC3E9231AA7C700C8E498 /* HomeViewController.swift */,
 				838EC3EB231AA7E500C8E498 /* LoginViewController.swift */,
@@ -275,10 +284,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F194E34B238B7B130080B106 /* TableViewCell1.swift in Sources */,
 				83FE755222F7F7A1002F3E16 /* InBizDemo.xcdatamodeld in Sources */,
 				838EC3FE231AEF8B00C8E498 /* PostFormViewController.swift in Sources */,
 				83FE754C22F7F7A1002F3E16 /* ViewController.swift in Sources */,
+				F194E34D238B7BEA0080B106 /* TableViewCell2.swift in Sources */,
 				83FE754A22F7F7A1002F3E16 /* AppDelegate.swift in Sources */,
+				F194E34F238B81030080B106 /* TableViewCell3.swift in Sources */,
 				838EC3F3231AA7E500C8E498 /* RegistrationViewController.swift in Sources */,
 				838EC3F2231AA7E500C8E498 /* TableViewCell.swift in Sources */,
 				D3D11C9A231BE71E00C67F15 /* HTTPClient.swift in Sources */,

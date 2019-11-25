@@ -10,9 +10,9 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
-    let CellId = "Cell"
+//    let CellId = "Cell"
     
-//    @IBOutlet weak var productDetailsTableView: UITableView!
+
     @IBOutlet weak var txtProductName: UILabel!
     @IBOutlet weak var txtProductCategory: UILabel!
     @IBOutlet weak var txtViewProductSpecification: UITextView!
@@ -58,20 +58,50 @@ class DetailViewController: UIViewController {
     
 }
 
-//extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
-//    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-//        return 2
-//    }
+extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+//        if indexPath.row == 0 {
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell1
+//            return cell
+//        }
+//        else if indexPath.row == 1{
 //
-//    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! DetailViewTableViewCell
-//        cell.placeHolderLbl!.text = "asas"
-////        cell.placeHolderLbl.text = "placcc"
-////        cell.valueLbl.text = "This is sample value"
-//        return cell
-//
-//
-//    }
-//
-//
-//}
+//            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell1
+//            return cell
+//        }
+        
+        switch indexPath.section {
+        case 0:
+            let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell1
+            return cell
+        case 1:
+                let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! TableViewCell2
+                return cell
+        case 2:
+                    let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! TableViewCell3
+                    return cell
+        default:
+            return UITableViewCell()
+        }
+        
+        
+       // cell.placeHolderLbl!.text = "asas"
+//        cell.placeHolderLbl.text = "placcc"
+//        cell.valueLbl.text = "This is sample value"
+        
+
+
+    }
+
+
+}
