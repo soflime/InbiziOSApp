@@ -185,8 +185,9 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
         nextViewController.productName = productListAarry[indexPath.row]["productName"] as? String
-        nextViewController.productSpecification = productListAarry[indexPath.row]["productDescription"] as? String
+        nextViewController.productSpecification = productListAarry[indexPath.row]["productDimension"] as? String
         nextViewController.productCategory = productListAarry[indexPath.row]["productCategory"] as? String
+        nextViewController.productDescription = productListAarry[indexPath.row]["productDescription"] as? String
         
 //        self.present(nextViewController, animated: true, completion: nil)
 //        func show(_ vc: UIViewController,

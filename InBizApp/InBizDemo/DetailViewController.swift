@@ -22,6 +22,7 @@ class DetailViewController: UIViewController {
     var productName: String!
     var productCategory: String!
     var productSpecification: String!
+    var productDescription: String!
     var productPrice: String!
     
     @IBOutlet weak var iDisplayImage: UIImageView!
@@ -61,7 +62,7 @@ class DetailViewController: UIViewController {
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 3
+        return 2
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -83,13 +84,17 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
         switch indexPath.section {
         case 0:
             let cell = tableView.dequeueReusableCell(withIdentifier: "cell1", for: indexPath) as! TableViewCell1
+            cell.productNameLbl.text = productName ?? ""
+            cell.productCategoryLbl.text = productCategory ?? ""
+            cell.productSummaryLbl.text = productSpecification ?? ""
             return cell
         case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! TableViewCell2
+                cell.productDescriptionLbl.text = productDescription ?? " "
                 return cell
-        case 2:
-                    let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! TableViewCell3
-                    return cell
+//        case 2:
+//                    let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! TableViewCell3
+//                    return cell
         default:
             return UITableViewCell()
         }
