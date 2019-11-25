@@ -50,7 +50,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         self.btnSubmit.layer.cornerRadius = 15
-        pickerData = ["Consumer","Manufacture/Supplier"]
+        pickerData = ["Consumer","Manufacturer/Supplier"]
         self.picker.delegate = self
         self.picker.dataSource = self
         addSpiner()

@@ -28,6 +28,7 @@
 		D3D11C9C231CFF9300C67F15 /* MyAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3D11C9B231CFF9300C67F15 /* MyAccount.swift */; };
 		F16A0C532389940700364BCF /* DetailViewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F16A0C512389940700364BCF /* DetailViewTableViewCell.swift */; };
 		F16A0C542389940700364BCF /* DetailViewTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F16A0C522389940700364BCF /* DetailViewTableViewCell.xib */; };
+		F194E347238AD7860080B106 /* hamburger_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = F194E346238AD7850080B106 /* hamburger_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,6 +57,7 @@
 		DE9B2DB8C123EEC55ED5A3EE /* Pods-InBizDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-InBizDemo.release.xcconfig"; path = "Target Support Files/Pods-InBizDemo/Pods-InBizDemo.release.xcconfig"; sourceTree = "<group>"; };
 		F16A0C512389940700364BCF /* DetailViewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewTableViewCell.swift; sourceTree = "<group>"; };
 		F16A0C522389940700364BCF /* DetailViewTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DetailViewTableViewCell.xib; sourceTree = "<group>"; };
+		F194E346238AD7850080B106 /* hamburger_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = hamburger_icon.png; path = ../../../Downloads/hamburger_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +117,7 @@
 				F16A0C522389940700364BCF /* DetailViewTableViewCell.xib */,
 				83FE755322F7F7A2002F3E16 /* Assets.xcassets */,
 				83FE755522F7F7A2002F3E16 /* LaunchScreen.storyboard */,
+				F194E346238AD7850080B106 /* hamburger_icon.png */,
 				838EC3F0231AA7E500C8E498 /* sample_icon.ico */,
 				838EC3FB231AA82B00C8E498 /* 3_splash.jpg */,
 				83FE755822F7F7A2002F3E16 /* Info.plist */,
@@ -209,6 +212,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F194E347238AD7860080B106 /* hamburger_icon.png in Resources */,
 				838EC3FC231AA82B00C8E498 /* 3_splash.jpg in Resources */,
 				F16A0C542389940700364BCF /* DetailViewTableViewCell.xib in Resources */,
 				83FE755722F7F7A2002F3E16 /* LaunchScreen.storyboard in Resources */,

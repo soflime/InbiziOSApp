@@ -86,24 +86,12 @@
         <scene sceneID="tbv-Sd-ne0">
             <objects>
                 <viewController storyboardIdentifier="Home" title="Home" modalPresentationStyle="fullScreen" id="PMB-ZL-TiI" customClass="HomeViewController" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="bmS-Wo-Goe">
+                    <view key="view" contentMode="scaleToFill" id="bmS-Wo-Goe">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView hidden="YES" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Iui-Dp-5lc">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="0.0"/>
-                                <color key="backgroundColor" red="0.1080407728" green="0.58067381139999996" blue="0.98815981220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </scrollView>
-                            <pageControl hidden="YES" contentMode="scaleToFill" ambiguous="YES" highlighted="YES" selected="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="hBI-dK-GAJ">
-                                <rect key="frame" x="160" y="0.0" width="55" height="37"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                            </pageControl>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-8l-W81">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="609"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-8l-W81">
+                                <rect key="frame" x="0.0" y="50" width="375" height="544"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <prototypes>
@@ -202,8 +190,8 @@
                                 </prototypes>
                                 <sections/>
                             </tableView>
-                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qub-1d-bEV">
-                                <rect key="frame" x="275" y="617" width="90" height="40"/>
+                            <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qub-1d-bEV">
+                                <rect key="frame" x="275" y="602" width="90" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="6L7-Wf-Sgg"/>
@@ -220,20 +208,11 @@
                         </subviews>
                         <color key="backgroundColor" red="0.1080407728" green="0.58067381139999996" blue="0.98815981220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="hBI-dK-GAJ" firstAttribute="top" secondItem="Iui-Dp-5lc" secondAttribute="bottom" id="4so-KD-izu"/>
                             <constraint firstItem="qub-1d-bEV" firstAttribute="top" secondItem="VGl-8l-W81" secondAttribute="bottom" constant="8" id="8Qb-UV-RdS"/>
-                            <constraint firstItem="Iui-Dp-5lc" firstAttribute="trailing" secondItem="VqF-6e-T39" secondAttribute="trailing" id="EyU-rH-w8D"/>
-                            <constraint firstItem="VGl-8l-W81" firstAttribute="top" secondItem="Iui-Dp-5lc" secondAttribute="bottom" id="IC5-wt-227"/>
                             <constraint firstItem="VGl-8l-W81" firstAttribute="trailing" secondItem="VqF-6e-T39" secondAttribute="trailing" id="SOu-15-NWG"/>
                             <constraint firstAttribute="bottom" secondItem="qub-1d-bEV" secondAttribute="bottom" constant="5" id="TGs-wc-zMO"/>
                             <constraint firstItem="VGl-8l-W81" firstAttribute="leading" secondItem="VqF-6e-T39" secondAttribute="leading" id="Tgj-z1-Zme"/>
-                            <constraint firstItem="VGl-8l-W81" firstAttribute="top" secondItem="Iui-Dp-5lc" secondAttribute="bottom" id="X7e-o1-N5y"/>
-                            <constraint firstItem="VGl-8l-W81" firstAttribute="top" secondItem="Iui-Dp-5lc" secondAttribute="bottom" id="YCf-Rv-kX1"/>
-                            <constraint firstItem="Iui-Dp-5lc" firstAttribute="top" secondItem="bmS-Wo-Goe" secondAttribute="top" id="emP-cQ-iUN"/>
-                            <constraint firstItem="hBI-dK-GAJ" firstAttribute="centerX" secondItem="bmS-Wo-Goe" secondAttribute="centerX" id="g0T-7t-0gh"/>
-                            <constraint firstItem="Iui-Dp-5lc" firstAttribute="leading" secondItem="VqF-6e-T39" secondAttribute="leading" id="ojh-2p-RnE"/>
-                            <constraint firstItem="VGl-8l-W81" firstAttribute="height" secondItem="bmS-Wo-Goe" secondAttribute="height" multiplier="5:10" constant="176.5" id="ptb-G8-eN9"/>
-                            <constraint firstItem="Iui-Dp-5lc" firstAttribute="height" secondItem="bmS-Wo-Goe" secondAttribute="height" multiplier="3:10" constant="-200.09999999999999" id="rLK-Al-naF"/>
+                            <constraint firstItem="VGl-8l-W81" firstAttribute="height" secondItem="bmS-Wo-Goe" secondAttribute="height" multiplier="5:10" constant="220.5" id="ptb-G8-eN9"/>
                             <constraint firstAttribute="trailing" secondItem="qub-1d-bEV" secondAttribute="trailing" constant="10" id="riP-8M-nWh"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VqF-6e-T39"/>
@@ -241,7 +220,7 @@
                     <navigationItem key="navigationItem" title="InBiz" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="Kc6-H4-6pP">
                         <leftBarButtonItems>
                             <barButtonItem style="plain" id="KeJ-pp-Rwi"/>
-                            <barButtonItem title="Item" id="hJJ-8o-yLM">
+                            <barButtonItem image="tray.2" catalog="system" id="hJJ-8o-yLM">
                                 <connections>
                                     <segue destination="jw0-oi-GL5" kind="presentation" id="thp-VE-Edn"/>
                                 </connections>
@@ -251,9 +230,6 @@
                     <connections>
                         <outlet property="btnHome" destination="qub-1d-bEV" id="KwJ-id-AU9"/>
                         <outlet property="btnPostMessage" destination="qub-1d-bEV" id="yro-tb-fOA"/>
-                        <outlet property="pageControl" destination="hBI-dK-GAJ" id="Bc1-Jb-FVB"/>
-                        <outlet property="scrollView" destination="Iui-Dp-5lc" id="W7T-Vk-bRD"/>
-                        <outlet property="scrollviewHeight" destination="rLK-Al-naF" id="mcM-7e-nJc"/>
                         <outlet property="tableViewCars" destination="VGl-8l-W81" id="hlc-rM-85Q"/>
                     </connections>
                 </viewController>
@@ -287,7 +263,7 @@
                                     <outlet property="delegate" destination="CEc-k8-SAI" id="by7-Cj-IMN"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Specification" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdZ-gr-7uf">
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter product Summary" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KdZ-gr-7uf">
                                 <rect key="frame" x="62" y="302" width="251" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -305,15 +281,6 @@
                                     <outlet property="delegate" destination="CEc-k8-SAI" id="WuK-ph-oOZ"/>
                                 </connections>
                             </textField>
-                            <button contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" reversesTitleShadowWhenHighlighted="YES" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="evE-Im-0TN">
-                                <rect key="frame" x="62" y="414" width="251" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="15"/>
-                                <state key="normal" title="Upload Photo">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                    <color key="titleShadowColor" red="0.21612894590000001" green="1" blue="0.1109801071" alpha="0.93816021130000005" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                            </button>
                             <button clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eBg-pG-OKt">
                                 <rect key="frame" x="62" y="478" width="83" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -346,6 +313,13 @@
                                     <action selector="backButton:" destination="CEc-k8-SAI" eventType="touchUpInside" id="hm9-ux-uR3"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Product Description" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hd5-lf-OBC">
+                                <rect key="frame" x="62" y="391" width="251" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="textColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.1080407728" green="0.58067381139999996" blue="0.98815981220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="0k7-Y9-Uxv"/>
@@ -358,11 +332,12 @@
                         <outlet property="txtProductName" destination="mH5-WN-1GX" id="zyL-Mj-VZM"/>
                         <outlet property="txtProductPrice" destination="eaU-4Q-r7V" id="v3v-Mn-MYX"/>
                         <outlet property="txtProductSpecification" destination="KdZ-gr-7uf" id="osX-07-jTP"/>
+                        <outlet property="txtProductSummary" destination="hd5-lf-OBC" id="an2-3k-FuN"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciJ-Mw-0vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3719" y="885"/>
+            <point key="canvasLocation" x="3717.5999999999999" y="884.70764617691157"/>
         </scene>
         <!--Login-->
         <scene sceneID="wg7-f3-ORb">
@@ -843,6 +818,7 @@
     <resources>
         <image name="first" width="30" height="30"/>
         <image name="second" width="30" height="30"/>
+        <image name="tray.2" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="thp-VE-Edn"/>

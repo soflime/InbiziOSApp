@@ -18,10 +18,12 @@ class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldD
     @IBOutlet weak var btnPost: UIButton!
     @IBOutlet weak var btnCancel: UIButton!
     
+    @IBOutlet weak var txtProductSummary: UITextField!
     var productName: String!
     var productCategory: String!
     var productSpecification: String!
     var productPrice: String!
+    var productDesription: String!
     
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
@@ -49,10 +51,14 @@ class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldD
         productPrice = txtProductPrice.text
         productCategory = txtProductCategory.text
         productSpecification = txtProductSpecification.text
+        productDesription = txtProductSummary.text
+      // text field need to be added
+        //  productDescription =
+        
         
         let username = UserDefaults.standard.string(forKey: "username")
         
-        let parameter = ["productName":productName, "productCompanyName":"LG", "productPrice":productPrice,"userName":username, "productCategory":productCategory, "productDescription":productSpecification]
+        let parameter = ["productName":productName, "productCompanyName":"NA", "productPrice":productPrice,"userName":username, "productCategory":productCategory, "productDescription":productSpecification,"productDimension":productDesription]
         
         showSpiner()
         client.MakeRequest(parameters: parameter as [String : Any], url: "http://tst5.jvmhost.net/Inbiz/postProduct",method: .post)

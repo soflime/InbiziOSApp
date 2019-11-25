@@ -50,27 +50,27 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
 //        }
         //self.scrollView.frame = CGRect(x: 0, y:0, width:self.view.frame.width, height:200)
         
-        let scrollViewWidth:CGFloat = self.scrollView.frame.width
+//        let scrollViewWidth:CGFloat = self.scrollView.frame.width
         
-        let imgOne = UIImageView(frame: CGRect(x:0, y:0,width:scrollViewWidth, height:280))
-        imgOne.image = UIImage(named: "Slide 1")
-        let imgTwo = UIImageView(frame: CGRect(x:scrollViewWidth, y:0,width:scrollViewWidth, height:280))
-        imgTwo.image = UIImage(named: "Slide 2")
-        let imgThree = UIImageView(frame: CGRect(x:scrollViewWidth*2, y:0,width:scrollViewWidth, height:280))
-        imgThree.image = UIImage(named: "Slide 3")
-        let imgFour = UIImageView(frame: CGRect(x:scrollViewWidth*3, y:0,width:scrollViewWidth, height:280))
-        imgFour.image = UIImage(named: "Slide 4")
-        
-        self.scrollView.addSubview(imgOne)
-        self.scrollView.addSubview(imgTwo)
-        self.scrollView.addSubview(imgThree)
-        self.scrollView.addSubview(imgFour)
-        //4
-        self.scrollView.contentSize = CGSize(width:self.scrollView.frame.width * 4, height:self.scrollView.frame.height)
-        self.scrollView.delegate = self
-        self.pageControl.currentPage = 0
-        
-        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(moveToNextPage), userInfo: nil, repeats: true)
+//        let imgOne = UIImageView(frame: CGRect(x:0, y:0,width:scrollViewWidth, height:280))
+//        imgOne.image = UIImage(named: "Slide 1")
+//        let imgTwo = UIImageView(frame: CGRect(x:scrollViewWidth, y:0,width:scrollViewWidth, height:280))
+//        imgTwo.image = UIImage(named: "Slide 2")
+//        let imgThree = UIImageView(frame: CGRect(x:scrollViewWidth*2, y:0,width:scrollViewWidth, height:280))
+//        imgThree.image = UIImage(named: "Slide 3")
+//        let imgFour = UIImageView(frame: CGRect(x:scrollViewWidth*3, y:0,width:scrollViewWidth, height:280))
+//        imgFour.image = UIImage(named: "Slide 4")
+//        
+//        self.scrollView.addSubview(imgOne)
+//        self.scrollView.addSubview(imgTwo)
+//        self.scrollView.addSubview(imgThree)
+//        self.scrollView.addSubview(imgFour)
+//        //4
+//        self.scrollView.contentSize = CGSize(width:self.scrollView.frame.width * 4, height:self.scrollView.frame.height)
+//        self.scrollView.delegate = self
+//        self.pageControl.currentPage = 0
+//        
+//        Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(moveToNextPage), userInfo: nil, repeats: true)
         
     }
     
@@ -166,7 +166,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         
         let prodSpecification = productListAarry[indexPath.row]["productDescription"] as? String
         
-        cell.lblProdSpecification.text = "Product Description:   \(prodSpecification!)"
+        cell.lblProdSpecification.text = "Product Summary:   \(prodSpecification!)"
         
         let number = productListAarry[indexPath.row]["productPrice"]
        
