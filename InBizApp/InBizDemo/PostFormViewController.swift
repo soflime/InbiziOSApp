@@ -52,8 +52,24 @@ class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldD
         productCategory = txtProductCategory.text
         productSpecification = txtProductSpecification.text
         productDesription = txtProductSummary.text
-      // text field need to be added
-        //  productDescription =
+   
+        //text field validation 
+        if (txtProductName.text ?? "").isEmpty {
+             Utility.alert(title: nil, message: "Please enter product name", target: self)
+             return
+         } else if (txtProductCategory.text ?? "").isEmpty {
+             
+             Utility.alert(title: nil, message: "Please enter Product category", target: self)
+             return
+         } else if (txtProductSpecification.text ?? "").isEmpty {
+             
+             Utility.alert(title: nil, message: "Please enter product summary", target: self)
+             return
+         } else if (txtProductPrice.text ?? "").isEmpty {
+            
+            Utility.alert(title: nil, message: "Please enter product price", target: self)
+            return
+        }
         
         
         let username = UserDefaults.standard.string(forKey: "username")
