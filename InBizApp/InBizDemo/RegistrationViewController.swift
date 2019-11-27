@@ -55,7 +55,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         self.picker.dataSource = self
         addSpiner()
         client.delegate = self
-        supliernameTextField.text = pickerData[0]
+//        supliernameTextField.text = pickerData[0]
         if pickerData[0] == "Consumer" {
             supliernameTextField.isHidden = true
         }
@@ -139,7 +139,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        supliernameTextField.text = pickerData[row]
+//        supliernameTextField.text = pickerData[row]
         if pickerData[row] == "Consumer" {
             supliernameTextField.isHidden = true
             fnameTextField.isHidden = false

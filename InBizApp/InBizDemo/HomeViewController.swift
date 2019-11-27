@@ -113,13 +113,30 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
             client.MakeRequest(parameters: parameter as [String : Any], url: "http://tst5.jvmhost.net/Inbiz/follow", method: .put
             )
         }
+        
+        let alert = UIAlertController(title: "Alert", message: "Successfully followed", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { action in
+              switch action.style{
+              case .default:
+                    print("default")
+
+              case .cancel:
+                    print("cancel")
+
+              case .destructive:
+                    print("destructive")
+
+
+        }}))
+        self.present(alert, animated: true, completion: nil)
+        
     }
     
     
     @IBAction func btnPost(_ sender: Any) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "PostForm") as! PostFormViewController
-        self.present(nextViewController, animated:true, completion:nil)
+          self.show(nextViewController, sender: self)
     }
     
     @objc func moveToNextPage (){

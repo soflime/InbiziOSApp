@@ -30,7 +30,8 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
         addSpiner()
         client.delegate = self
         
-        
+        useridField.delegate = self
+        pwdField.delegate = self
         
         
     }
@@ -58,7 +59,8 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
     
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Registration") as! RegistrationViewController
-        self.present(nextViewController, animated:true, completion:nil)
+//        self.present(nextViewController, animated:true, completion:nil)
+       self.show(nextViewController, sender: self)
         
     }
     
@@ -143,10 +145,13 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
         self.activityIndicator.stopAnimating()
     }
     
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        textField.resignFirstResponder()
+//        return true
+//    }
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        textField.resignFirstResponder()
-        return true
+        self.view.endEditing(true)
+        return false
     }
-    
 
 }

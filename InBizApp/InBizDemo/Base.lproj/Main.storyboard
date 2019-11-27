@@ -487,7 +487,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Price Per Unit" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eaU-4Q-r7V">
-                                <rect key="frame" x="62" y="353" width="251" height="30"/>
+                                <rect key="frame" x="62" y="352" width="251" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -533,6 +533,9 @@
                                 <color key="textColor" systemColor="systemFillColor" red="0.47058823529999999" green="0.47058823529999999" blue="0.50196078430000002" alpha="0.20000000000000001" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="CEc-k8-SAI" id="4p0-eu-L8n"/>
+                                </connections>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.1080407728" green="0.58067381139999996" blue="0.98815981220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

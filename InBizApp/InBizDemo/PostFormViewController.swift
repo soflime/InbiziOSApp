@@ -16,11 +16,12 @@ class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldD
     @IBOutlet weak var txtProductCategory: UITextField!
     @IBOutlet weak var txtProductSpecification: UITextField!
     @IBOutlet weak var txtProductPrice: UITextField!
+     @IBOutlet weak var txtProductSummary: UITextField!
     
     @IBOutlet weak var btnPost: UIButton!
     @IBOutlet weak var btnCancel: UIButton!
     
-    @IBOutlet weak var txtProductSummary: UITextField!
+   
     var productName: String!
     var productCategory: String!
     var productSpecification: String!
@@ -41,6 +42,7 @@ class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldD
         self.btnCancel.layer.cornerRadius = 15
         addSpiner()
         client.delegate = self
+        
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -171,5 +173,10 @@ class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldD
         selectedCategory = categoryType[row]
         txtProductCategory.text = selectedCategory
         
+    }
+    // text field delegate
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.view.endEditing(true)
+        return false
     }
 }
