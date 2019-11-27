@@ -554,7 +554,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciJ-Mw-0vt" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3717.5999999999999" y="884.70764617691157"/>
+            <point key="canvasLocation" x="4656.8000000000002" y="884.70764617691157"/>
         </scene>
         <!--Login-->
         <scene sceneID="wg7-f3-ORb">
@@ -762,7 +762,7 @@
                         <color key="tintColor" red="0.21612894592379572" green="1" blue="0.11098010710014872" alpha="0.93816021125915483" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="XIh-rA-hvd"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Registration" image="first" selectedImage="second" id="7AJ-bq-QHl"/>
+                    <navigationItem key="navigationItem" id="vTx-Ms-e13"/>
                     <connections>
                         <outlet property="btnSubmit" destination="QM7-qE-dHG" id="5cP-Vg-hmE"/>
                         <outlet property="confirmPasswordTextField" destination="FiZ-QI-Z2L" id="pc9-t9-22D"/>
@@ -777,7 +777,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z5Z-Xg-k2Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2420" y="1002"/>
+            <point key="canvasLocation" x="3359.1999999999998" y="1001.649175412294"/>
         </scene>
         <!--MyAccount-->
         <scene sceneID="tIl-99-mSk">
@@ -913,7 +913,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8LP-dp-Dbh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7024.8000000000002" y="785.75712143928047"/>
+            <point key="canvasLocation" x="7964" y="785.75712143928047"/>
         </scene>
         <!--Login-->
         <scene sceneID="1GY-2h-0SV">
@@ -1139,7 +1139,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="PLn-EJ-ey7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4572" y="487"/>
+            <point key="canvasLocation" x="5511.1999999999998" y="486.20689655172418"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="97l-42-uGb">
@@ -1159,6 +1159,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xmG-H3-H53" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="6273" y="-1131"/>
+        </scene>
+        <!--Registration-->
+        <scene sceneID="Q0D-3j-23v">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="tAG-5Z-dvc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Registration" image="first" selectedImage="second" id="7AJ-bq-QHl"/>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="VDN-Qm-vMM"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="r3M-ma-BsX">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="IKJ-VF-0X0" kind="relationship" relationship="rootViewController" id="v5B-M7-6nj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bZe-ra-L7M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2420" y="1001.649175412294"/>
         </scene>
     </scenes>
     <resources>

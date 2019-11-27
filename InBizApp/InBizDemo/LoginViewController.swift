@@ -57,11 +57,15 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
     
     @IBAction func registerWithUsButton(_ sender: Any) {
     
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Registration") as! RegistrationViewController
+////        self.present(nextViewController, animated:true, completion:nil)
+//       self.show(nextViewController, sender: self)
+        
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Registration") as! RegistrationViewController
-//        self.present(nextViewController, animated:true, completion:nil)
-       self.show(nextViewController, sender: self)
-        
+          self.show(nextViewController, sender: self)
+//
     }
     
     @IBAction func loginButton(_ sender: Any) {
