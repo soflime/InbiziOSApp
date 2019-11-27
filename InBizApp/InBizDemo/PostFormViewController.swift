@@ -8,7 +8,9 @@
 
 import UIKit
 
-class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldDelegate {
+let errorMsg = "All fields are mandatory. kindly fill missing data !"
+
+class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldDelegate, UIPickerViewDelegate, UIPickerViewDataSource {
 
     @IBOutlet weak var txtProductName: UITextField!
     @IBOutlet weak var txtProductCategory: UITextField!
@@ -31,6 +33,10 @@ class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldD
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        //adding picker view to the textfield
+        createPickerView()
+        dismissPickerView()
+        
         self.btnPost.layer.cornerRadius = 15
         self.btnCancel.layer.cornerRadius = 15
         addSpiner()
@@ -53,26 +59,26 @@ class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldD
         productSpecification = txtProductSpecification.text
         productDesription = txtProductSummary.text
    
-        //text field validation 
+        //text field validation
         if (txtProductName.text ?? "").isEmpty {
-             Utility.alert(title: nil, message: "Please enter product name", target: self)
+             Utility.alert(title: nil, message: errorMsg, target: self)
              return
          } else if (txtProductCategory.text ?? "").isEmpty {
              
-             Utility.alert(title: nil, message: "Please enter Product category", target: self)
+             Utility.alert(title: nil, message: errorMsg, target: self)
              return
          } else if (txtProductSpecification.text ?? "").isEmpty {
              
-             Utility.alert(title: nil, message: "Please enter product summary", target: self)
+             Utility.alert(title: nil, message: errorMsg, target: self)
              return
          } else if (txtProductPrice.text ?? "").isEmpty {
             
-            Utility.alert(title: nil, message: "Please enter product price", target: self)
+            Utility.alert(title: nil, message: errorMsg, target: self)
             return
         }
         
         
-        let username = UserDefaults.standard.string(forKey: "username")
+      let username = UserDefaults.standard.string(forKey: "username")
         
         let parameter = ["productName":productName, "productCompanyName":"NA", "productPrice":productPrice,"userName":username, "productCategory":productCategory, "productDescription":productSpecification,"productDimension":productDesription]
         
@@ -117,5 +123,53 @@ class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldD
     
     func hideSpiner() -> Void {
         self.activityIndicator.stopAnimating()
+    }
+    
+    var selectedCategory : String?
+    
+    //picker view options
+    var categoryType = ["Television","Washing Machine","Air Conditioner","Other Electronics","Funiture","Others"]
+    
+    func createPickerView() {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        
+        txtProductCategory.inputView = pickerView
+    }
+    
+    func dismissPickerView()  {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.dissmisskeyboard))
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        txtProductCategory.inputAccessoryView = toolBar
+    }
+    
+    @objc func dissmisskeyboard()
+    {
+        view.endEditing(true)
+    }
+    
+    //picker view delegate
+    
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return categoryType.count
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return categoryType[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        selectedCategory = categoryType[row]
+        txtProductCategory.text = selectedCategory
+        
     }
 }

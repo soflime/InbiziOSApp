@@ -8,6 +8,8 @@
 
 import UIKit
 
+let loginErrorMsg = "Invalid Credentials. Kindly check user name and password "
+
 class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var useridField: UITextField!
@@ -63,11 +65,11 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
     @IBAction func loginButton(_ sender: Any) {
         
         if (useridField.text ?? "").isEmpty {
-            Utility.alert(title: nil, message: "Please enter username", target: self)
+            Utility.alert(title: nil, message: loginErrorMsg, target: self)
             return
         } else if (pwdField.text ?? "").isEmpty {
             
-            Utility.alert(title: nil, message: "Please enter password", target: self)
+            Utility.alert(title: nil, message: loginErrorMsg, target: self)
             return
         }
        
