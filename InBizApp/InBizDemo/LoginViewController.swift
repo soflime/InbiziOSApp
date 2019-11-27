@@ -28,7 +28,7 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
         self.loginButton.layer.cornerRadius = 15
         self.regButton.layer.cornerRadius = 15
         addSpiner()
-        client.delegate = self
+//        client.delegate = self
         
         useridField.delegate = self
         pwdField.delegate = self
@@ -78,6 +78,8 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
             Utility.alert(title: nil, message: loginErrorMsg, target: self)
             return
         }
+        
+         client.delegate = self
        
         userId = useridField.text
         pwd = pwdField.text
@@ -159,3 +161,6 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
     }
 
 }
+
+
+

@@ -288,11 +288,11 @@
             <objects>
                 <viewController storyboardIdentifier="Home" title="Home" modalPresentationStyle="fullScreen" id="PMB-ZL-TiI" customClass="HomeViewController" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bmS-Wo-Goe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-8l-W81">
-                                <rect key="frame" x="0.0" y="60" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="50" width="375" height="544"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <prototypes>
@@ -405,7 +405,7 @@
                                 <sections/>
                             </tableView>
                             <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qub-1d-bEV">
-                                <rect key="frame" x="275" y="622" width="90" height="40"/>
+                                <rect key="frame" x="275" y="602" width="90" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="6L7-Wf-Sgg"/>
@@ -431,15 +431,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VqF-6e-T39"/>
                     </view>
-                    <navigationItem key="navigationItem" title="InBiz" leftItemsSupplementBackButton="YES" largeTitleDisplayMode="always" id="Kc6-H4-6pP">
-                        <leftBarButtonItems>
-                            <barButtonItem style="plain" id="KeJ-pp-Rwi"/>
-                            <barButtonItem image="tray.2" catalog="system" id="hJJ-8o-yLM">
-                                <connections>
-                                    <segue destination="jw0-oi-GL5" kind="presentation" id="thp-VE-Edn"/>
-                                </connections>
-                            </barButtonItem>
-                        </leftBarButtonItems>
+                    <navigationItem key="navigationItem" title="InBiz" id="Kc6-H4-6pP">
+                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu_icon" id="hJJ-8o-yLM">
+                            <connections>
+                                <segue destination="jw0-oi-GL5" kind="presentation" id="thp-VE-Edn"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="btnHome" destination="qub-1d-bEV" id="KwJ-id-AU9"/>
@@ -1183,10 +1180,11 @@
     </scenes>
     <resources>
         <image name="first" width="30" height="30"/>
+        <image name="menu_icon" width="25" height="25"/>
         <image name="second" width="30" height="30"/>
-        <image name="tray.2" catalog="system" width="64" height="56"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="AUY-vF-kX7"/>
         <segue reference="jAO-2P-IYM"/>
         <segue reference="08l-xg-Czc"/>
     </inferredMetricsTieBreakers>
