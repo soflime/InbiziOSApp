@@ -90,6 +90,11 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
             }
             getAllProductWithTimeInterval()
         }
+        
+
+            // Hide the Navigation Bar
+            self.navigationController?.setNavigationBarHidden(false, animated: animated)
+     
        
     }
     

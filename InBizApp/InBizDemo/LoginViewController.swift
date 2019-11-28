@@ -124,6 +124,7 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
        
         
         guard let code = data["statusCode"] as? NSInteger else {
+            
             self.view.makeToast(data["response"] as? String)
             
             Utility.alert(title: nil, message:loginErrorMsg , target: self)
@@ -135,6 +136,11 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
             UserDefaults.standard.set(true, forKey: "userlogin")
             UserDefaults.standard.synchronize()
             self.tabBarController?.selectedIndex = 0
+            
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+//            self.present(nextViewController, animated:true, completion:nil)
+            self.show(nextViewController, sender: self)
         }
        
     }

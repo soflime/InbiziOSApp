@@ -288,11 +288,11 @@
             <objects>
                 <viewController storyboardIdentifier="Home" title="Home" modalPresentationStyle="fullScreen" id="PMB-ZL-TiI" customClass="HomeViewController" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="bmS-Wo-Goe">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="VGl-8l-W81">
-                                <rect key="frame" x="0.0" y="50" width="375" height="544"/>
+                                <rect key="frame" x="0.0" y="60" width="375" height="554"/>
                                 <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <rect key="contentStretch" x="1" y="0.0" width="1" height="1"/>
                                 <prototypes>
@@ -405,7 +405,7 @@
                                 <sections/>
                             </tableView>
                             <button hidden="YES" opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qub-1d-bEV">
-                                <rect key="frame" x="275" y="602" width="90" height="40"/>
+                                <rect key="frame" x="275" y="622" width="90" height="40"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="90" id="6L7-Wf-Sgg"/>
@@ -431,13 +431,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="VqF-6e-T39"/>
                     </view>
-                    <navigationItem key="navigationItem" title="InBiz" id="Kc6-H4-6pP">
-                        <barButtonItem key="leftBarButtonItem" title="Item" image="menu_icon" id="hJJ-8o-yLM">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="InBiz" largeTitleDisplayMode="never" id="Kc6-H4-6pP">
+                        <barButtonItem key="leftBarButtonItem" image="menu_icon" id="hJJ-8o-yLM">
                             <connections>
                                 <segue destination="jw0-oi-GL5" kind="presentation" id="thp-VE-Edn"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <splitViewMasterSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <connections>
                         <outlet property="btnHome" destination="qub-1d-bEV" id="KwJ-id-AU9"/>
                         <outlet property="btnPostMessage" destination="qub-1d-bEV" id="yro-tb-fOA"/>
@@ -558,11 +561,11 @@
             <objects>
                 <viewController storyboardIdentifier="Login" title="Login" id="8rJ-Kc-sve" customClass="LoginViewController" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlV-NT-VXM">
-                                <rect key="frame" x="36" y="307" width="303" height="34"/>
+                                <rect key="frame" x="36" y="403" width="303" height="34"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Login">
@@ -570,36 +573,35 @@
                                 </state>
                                 <connections>
                                     <action selector="loginButton:" destination="8rJ-Kc-sve" eventType="touchUpInside" id="Pgq-lN-lOh"/>
-                                    <segue destination="ICr-a0-j3P" kind="show" id="4iV-GV-m88"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="INbiz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Vc-wN-QJi">
-                                <rect key="frame" x="153" y="79" width="69" height="37"/>
+                                <rect key="frame" x="153" y="175" width="69" height="37"/>
                                 <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="31"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="...it pays to be  INbiz!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b7G-8A-o3D">
-                                <rect key="frame" x="107.5" y="115" width="160" height="21"/>
+                                <rect key="frame" x="107.5" y="211" width="160" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="userid" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eg3-VP-Mew">
-                                <rect key="frame" x="16" y="188" width="343" height="34"/>
+                                <rect key="frame" x="16" y="284" width="343" height="34"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8C5-x1-J9f">
-                                <rect key="frame" x="107" y="371" width="149" height="34"/>
+                                <rect key="frame" x="107" y="467" width="149" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Forgot password ?">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kfk-4g-gvH">
-                                <rect key="frame" x="36" y="588" width="303" height="30"/>
+                                <rect key="frame" x="36" y="608" width="303" height="30"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Registered With Us!">
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -609,10 +611,10 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" restorationIdentifier="pwd" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please Enter Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="79x-jK-2ku">
-                                <rect key="frame" x="16" y="232" width="343" height="34"/>
+                                <rect key="frame" x="16" y="328" width="343" height="34"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.1080407728378141" green="0.58067381137427942" blue="0.98815981217616577" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -938,7 +940,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="bb" id="4s2-54-lTc"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="GIO-uy-HuT">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -975,7 +977,7 @@
             <objects>
                 <viewController id="GnT-cM-HN8" customClass="EnquiryViewController" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KgC-rZ-fZx">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user@abc.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLM-oF-5J6">
@@ -1145,7 +1147,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="WTv-hd-mkm"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U8g-75-M7o">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -1184,8 +1186,7 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AUY-vF-kX7"/>
-        <segue reference="jAO-2P-IYM"/>
+        <segue reference="sYt-wS-rsI"/>
         <segue reference="08l-xg-Czc"/>
     </inferredMetricsTieBreakers>
 </document>
