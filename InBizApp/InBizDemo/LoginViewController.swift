@@ -9,6 +9,8 @@
 import UIKit
 
 let loginErrorMsg = "Invalid Credentials. Kindly check user name and password "
+let emptyUserName = "Please enter user name"
+let emptyPassword = "Please enter password"
 
 class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDelegate {
 
@@ -71,11 +73,11 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
     @IBAction func loginButton(_ sender: Any) {
         
         if (useridField.text ?? "").isEmpty {
-            Utility.alert(title: nil, message: loginErrorMsg, target: self)
+            Utility.alert(title: nil, message: emptyUserName, target: self)
             return
         } else if (pwdField.text ?? "").isEmpty {
             
-            Utility.alert(title: nil, message: loginErrorMsg, target: self)
+            Utility.alert(title: nil, message: emptyPassword, target: self)
             return
         }
         
@@ -120,8 +122,11 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
 
         hideSpiner()
        
+        
         guard let code = data["statusCode"] as? NSInteger else {
             self.view.makeToast(data["response"] as? String)
+            
+            Utility.alert(title: nil, message:loginErrorMsg , target: self)
             return
         }
         
@@ -131,6 +136,7 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
             UserDefaults.standard.synchronize()
             self.tabBarController?.selectedIndex = 0
         }
+       
     }
 
     func addSpiner() -> Void {
@@ -151,10 +157,7 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
         self.activityIndicator.stopAnimating()
     }
     
-//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-//        textField.resignFirstResponder()
-//        return true
-//    }
+
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         self.view.endEditing(true)
         return false

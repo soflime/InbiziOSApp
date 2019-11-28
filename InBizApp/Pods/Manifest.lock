@@ -1,28 +1,32 @@
 PODS:
-  - Alamofire (4.8.2)
-  - ReachabilitySwift (4.3.1)
+  - Alamofire (4.9.1)
+  - ReachabilitySwift (5.0.0)
+  - SideMenu (6.4.7)
   - SwiftyJSON (5.0.0)
   - Toast-Swift (5.0.0)
 
 DEPENDENCIES:
-  - Alamofire (~> 4.7)
+  - Alamofire (~> 4.2)
   - ReachabilitySwift
+  - SideMenu
   - SwiftyJSON
-  - Toast-Swift (~> 5.0)
+  - Toast-Swift (~> 5.0.0)
 
 SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
+  trunk:
     - Alamofire
     - ReachabilitySwift
+    - SideMenu
     - SwiftyJSON
     - Toast-Swift
 
 SPEC CHECKSUMS:
-  Alamofire: ae5c501addb7afdbb13687d7f2f722c78734c2d3
-  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
+  SideMenu: 928a015669c3afc201e1fe3a87f1b0bc8993a664
   SwiftyJSON: 36413e04c44ee145039d332b4f4e2d3e8d6c4db7
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: 6551c3ede6964faef89f8738c57a1488029d1f25
+PODFILE CHECKSUM: d7304482a871cb64505d98fbbb116fe3fe58868f
 
-COCOAPODS: 1.6.1
+COCOAPODS: 1.8.4

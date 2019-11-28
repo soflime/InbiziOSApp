@@ -134,8 +134,12 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     
     
     @IBAction func backAction(_ sender: Any) {
-         UserDefaults.standard.set(true, forKey: "fromRegistration")
+         //UserDefaults.standard.set(true, forKey: "fromRegistration")
          self.dismiss(animated: true, completion: nil)
+        
+//        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+//        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Login") as! PostFormViewController
+//          self.show(nextViewController, sender: self)
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
