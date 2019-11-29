@@ -188,7 +188,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         
         let prodSpecification = productListAarry[indexPath.row]["productDimension"] as? String
         
-        cell.lblProdSpecification.text = "Product Summary:   \(String(describing: prodSpecification))"
+        cell.lblProdSpecification.text = "Product Summary: \(prodSpecification ?? " ")"
         
         let number = productListAarry[indexPath.row]["productPrice"]
        
