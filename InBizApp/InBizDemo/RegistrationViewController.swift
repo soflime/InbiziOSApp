@@ -114,12 +114,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         return pickerData[row]
     }
     
-//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-//          selectedCategory = pickerData[row]
-//          pickerTextField.text = selectedCategory
-//
-//      }
-   
+
 
     @IBAction func registrationButtonAction(_ sender: Any) {
         
@@ -146,8 +141,8 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
             return
         } else if (supliernameTextField.text ?? "").isEmpty {
             
-//            Utility.alert(title: nil, message: "Please enter suplier name", target: self)
-//            return
+           Utility.alert(title: nil, message: "Please enter suplier name", target: self)
+           return
         }
         
        
@@ -200,6 +195,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         
                   selectedCategory = pickerData[row]
                   pickerTextField.text = selectedCategory
+                 supliername = selectedCategory
     }
 
     
