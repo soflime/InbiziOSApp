@@ -47,7 +47,10 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
             
         }
         
-        navigationController?.isNavigationBarHidden = true
+        //  navigationController?.isNavigationBarHidden = true
+        
+        // fix Navigation Bar
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
         
         
     }

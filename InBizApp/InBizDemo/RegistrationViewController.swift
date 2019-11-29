@@ -59,6 +59,8 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         if pickerData[0] == "Consumer" {
             supliernameTextField.isHidden = true
         }
+        
+     
     }
     
     override func didReceiveMemoryWarning() {

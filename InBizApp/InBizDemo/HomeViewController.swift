@@ -92,7 +92,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         }
         
 
-            // Hide the Navigation Bar
+            // fix Navigation Bar
             self.navigationController?.setNavigationBarHidden(false, animated: animated)
      
        
