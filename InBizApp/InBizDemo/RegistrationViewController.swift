@@ -49,6 +49,11 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     
     let client = HTTPClient()
     
+    override func viewWillAppear(_ animated: Bool) {
+        // fix Navigation Bar
+        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.btnSubmit.layer.cornerRadius = 15
