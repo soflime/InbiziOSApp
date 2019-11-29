@@ -139,7 +139,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
             
             Utility.alert(title: nil, message: "Please enter confirm password", target: self)
             return
-        } else if (supliernameTextField.text ?? "").isEmpty {
+        } else if (supliernameTextField.text ?? "").isEmpty && !supliernameTextField.isHidden{
             
            Utility.alert(title: nil, message: "Please enter suplier name", target: self)
            return
@@ -227,7 +227,11 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         
         hideSpiner()
         guard let code = data["statusCode"] as? NSInteger else {
-            self.view.makeToast(data["response"] as? String)
+//            self.view.makeToast(data["response"] as? String)
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+            //            self.present(nextViewController, animated:true, completion:nil)
+            self.show(nextViewController, sender: self)
             return
         }
         
