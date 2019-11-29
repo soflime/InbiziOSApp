@@ -33,6 +33,7 @@
 		F194E34B238B7B130080B106 /* TableViewCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = F194E34A238B7B130080B106 /* TableViewCell1.swift */; };
 		F194E34D238B7BEA0080B106 /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F194E34C238B7BEA0080B106 /* TableViewCell2.swift */; };
 		F194E34F238B81030080B106 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F194E34E238B81030080B106 /* TableViewCell3.swift */; };
+		F1978BEB2390EE7D0019C480 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1978BEA2390EE7D0019C480 /* SideMenuTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		F194E34A238B7B130080B106 /* TableViewCell1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell1.swift; sourceTree = "<group>"; };
 		F194E34C238B7BEA0080B106 /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
 		F194E34E238B81030080B106 /* TableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
+		F1978BEA2390EE7D0019C480 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +129,7 @@
 				838EC3F9231AA81900C8E498 /* DetailViewController.swift */,
 				F16A0C512389940700364BCF /* DetailViewTableViewCell.swift */,
 				F16A0C522389940700364BCF /* DetailViewTableViewCell.xib */,
+				F1978BEA2390EE7D0019C480 /* SideMenuTableViewController.swift */,
 				83FE755322F7F7A2002F3E16 /* Assets.xcassets */,
 				83FE755522F7F7A2002F3E16 /* LaunchScreen.storyboard */,
 				F194E346238AD7850080B106 /* hamburger_icon.png */,
@@ -297,6 +300,7 @@
 				F16A0C532389940700364BCF /* DetailViewTableViewCell.swift in Sources */,
 				838EC3FA231AA81900C8E498 /* DetailViewController.swift in Sources */,
 				D3D11C98231BE3D900C67F15 /* Utility.swift in Sources */,
+				F1978BEB2390EE7D0019C480 /* SideMenuTableViewController.swift in Sources */,
 				F194E349238B76560080B106 /* EnquiryViewController.swift in Sources */,
 				D3D11C9C231CFF9300C67F15 /* MyAccount.swift in Sources */,
 				838EC3F1231AA7E500C8E498 /* LoginViewController.swift in Sources */,
