@@ -106,7 +106,11 @@ class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldD
             print("Post Successful!")
             UserDefaults.standard.set(true,forKey: "postSuccessful")
             //self.dismiss(animated: true, completion: nil)
-            Utility.alert(title: nil, message: "Posted", target: self)
+            //Utility.alert(title: nil, message: "Posted", target: self)
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+            //            self.present(nextViewController, animated:true, completion:nil)
+            self.show(nextViewController, sender: self)
         }
     }
     
