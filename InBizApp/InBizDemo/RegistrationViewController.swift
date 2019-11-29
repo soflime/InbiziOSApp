@@ -17,6 +17,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     
     @IBOutlet weak var confirmPasswordTextField: UITextField!
     
+    @IBOutlet weak var pickerTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
     
     @IBOutlet weak var fnameTextField: UITextField!
@@ -44,6 +45,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
    
     
     var pickerData : [String] = [String]()
+    var selectedCategory : String?
     
     let client = HTTPClient()
     
@@ -51,8 +53,8 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         super.viewDidLoad()
         self.btnSubmit.layer.cornerRadius = 15
         pickerData = ["Consumer","Manufacturer/Supplier"]
-        self.picker.delegate = self
-        self.picker.dataSource = self
+//        self.picker.delegate = self
+//        self.picker.dataSource = self
         addSpiner()
         client.delegate = self
 //        supliernameTextField.text = pickerData[0]
@@ -60,12 +62,44 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
             supliernameTextField.isHidden = true
         }
         
+        
+        //adding picker view to the textfield
+        createPickerView()
+        dismissPickerView()
+        
      
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    //picker view options
+    var categoryType = ["Television","Washing Machine","Air Conditioner","Other Electronics","Funiture","Others"]
+    
+    func createPickerView() {
+        let pickerView = UIPickerView()
+        pickerView.delegate = self
+        
+        pickerTextField.inputView = pickerView
+        
+    }
+    
+    func dismissPickerView()  {
+        let toolBar = UIToolbar()
+        toolBar.sizeToFit()
+        
+        let doneButton = UIBarButtonItem(title: "Done", style: .plain, target: self, action: #selector(self.dissmisskeyboard))
+        toolBar.setItems([doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        
+        pickerTextField.inputAccessoryView = toolBar
+    }
+    
+    @objc func dissmisskeyboard()
+    {
+        view.endEditing(true)
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -79,6 +113,12 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
+    
+//    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+//          selectedCategory = pickerData[row]
+//          pickerTextField.text = selectedCategory
+//
+//      }
    
 
     @IBAction func registrationButtonAction(_ sender: Any) {
@@ -89,10 +129,10 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         } else if (userTextField.text ?? "").isEmpty {
             Utility.alert(title: nil, message: "Please enter email", target: self)
             return
-        } else if (fnameTextField.text ?? "").isEmpty {
+        } else if (fnameTextField.text ?? "").isEmpty && !fnameTextField.isHidden{
             Utility.alert(title: nil, message: "Please enter first name", target: self)
             return
-        } else if (lnameTextField.text ?? "").isEmpty {
+        } else if (lnameTextField.text ?? "").isEmpty && !lnameTextField.isHidden {
             
             Utility.alert(title: nil, message: "Please enter last name", target: self)
             return
@@ -106,8 +146,8 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
             return
         } else if (supliernameTextField.text ?? "").isEmpty {
             
-            Utility.alert(title: nil, message: "Please enter suplier name", target: self)
-            return
+//            Utility.alert(title: nil, message: "Please enter suplier name", target: self)
+//            return
         }
         
        
@@ -157,6 +197,9 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
             fnameTextField.isHidden = true
             lnameTextField.isHidden = true
         }
+        
+                  selectedCategory = pickerData[row]
+                  pickerTextField.text = selectedCategory
     }
 
     
@@ -194,7 +237,11 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         
         if (code == 200) {
             print("Registration Successful!")
-            self.dismiss(animated: true, completion: nil)
+            //self.dismiss(animated: true, completion: nil)
+            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+            //            self.present(nextViewController, animated:true, completion:nil)
+            self.show(nextViewController, sender: self)
         }
         
     }
@@ -204,6 +251,11 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         return true
     }
     
+    // text field delegate
+//    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+//        self.view.endEditing(true)
+//        return false
+//    }
     
 }
 

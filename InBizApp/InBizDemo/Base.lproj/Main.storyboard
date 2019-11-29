@@ -663,7 +663,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSq-IZ-g7N">
-                                <rect key="frame" x="69" y="205" width="247" height="30"/>
+                                <rect key="frame" x="69" y="140" width="247" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -672,7 +672,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RT8-ke-xaZ">
-                                <rect key="frame" x="69" y="299" width="247" height="30"/>
+                                <rect key="frame" x="69" y="220" width="247" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -681,7 +681,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="First Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jBJ-X1-9sC">
-                                <rect key="frame" x="71" y="388" width="116" height="30"/>
+                                <rect key="frame" x="71" y="344" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -690,7 +690,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="txtenterpriseid" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enerprise/Supplier Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F7E-br-Kfa">
-                                <rect key="frame" x="69" y="436" width="247" height="30"/>
+                                <rect key="frame" x="69" y="384" width="247" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -699,7 +699,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Last Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ysj-vc-nOQ">
-                                <rect key="frame" x="200" y="388" width="116" height="30"/>
+                                <rect key="frame" x="200" y="344" width="116" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -707,16 +707,12 @@
                                     <outlet property="delegate" destination="IKJ-VF-0X0" id="jBm-UP-Kl8"/>
                                 </connections>
                             </textField>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L14-Uy-MhR">
-                                <rect key="frame" x="69" y="132" width="247" height="46"/>
+                            <pickerView hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L14-Uy-MhR">
+                                <rect key="frame" x="69" y="61" width="247" height="46"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <connections>
-                                    <outlet property="dataSource" destination="IKJ-VF-0X0" id="1J8-uM-4Z3"/>
-                                    <outlet property="delegate" destination="IKJ-VF-0X0" id="Kva-Xj-13L"/>
-                                </connections>
                             </pickerView>
                             <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QM7-qE-dHG">
-                                <rect key="frame" x="118" y="497" width="121" height="30"/>
+                                <rect key="frame" x="127" y="434" width="121" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -728,7 +724,7 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wLz-lm-5fh">
-                                <rect key="frame" x="69" y="251" width="247" height="30"/>
+                                <rect key="frame" x="69" y="180" width="247" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -737,7 +733,7 @@
                                 </connections>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FiZ-QI-Z2L">
-                                <rect key="frame" x="69" y="337" width="247" height="30"/>
+                                <rect key="frame" x="69" y="260" width="247" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -745,12 +741,18 @@
                                     <outlet property="delegate" destination="IKJ-VF-0X0" id="Yz4-ow-uBn"/>
                                 </connections>
                             </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Please select value" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8tO-vQ-eaD">
+                                <rect key="frame" x="69" y="300" width="247" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" red="0.1080407728" green="0.58067381139999996" blue="0.98815981220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <color key="tintColor" red="0.21612894592379572" green="1" blue="0.11098010710014872" alpha="0.93816021125915483" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="XIh-rA-hvd"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Registration" largeTitleDisplayMode="never" id="vTx-Ms-e13"/>
+                    <navigationItem key="navigationItem" title="InBiz" largeTitleDisplayMode="never" id="vTx-Ms-e13"/>
                     <connections>
                         <outlet property="btnSubmit" destination="QM7-qE-dHG" id="5cP-Vg-hmE"/>
                         <outlet property="confirmPasswordTextField" destination="FiZ-QI-Z2L" id="pc9-t9-22D"/>
@@ -758,7 +760,7 @@
                         <outlet property="fnameTextField" destination="jBJ-X1-9sC" id="Ag9-Z6-3A8"/>
                         <outlet property="lnameTextField" destination="ysj-vc-nOQ" id="VAe-1r-nvc"/>
                         <outlet property="passwordTextField" destination="RT8-ke-xaZ" id="sOf-MK-vXT"/>
-                        <outlet property="picker" destination="L14-Uy-MhR" id="ADj-BA-FJ5"/>
+                        <outlet property="pickerTextField" destination="8tO-vQ-eaD" id="BD8-1y-wF0"/>
                         <outlet property="supliernameTextField" destination="F7E-br-Kfa" id="r08-Xg-TF4"/>
                         <outlet property="userTextField" destination="wLz-lm-5fh" id="EcE-Vj-yOB"/>
                     </connections>
