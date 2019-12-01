@@ -28,7 +28,8 @@ class EnquiryViewController: UIViewController,HTTRsponseDelegate {
     override func viewWillAppear(_ animated: Bool) {
         
         // fix Navigation Bar
-        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+//        self.navigationController?.setNavigationBarHidden(false, animated: animated)
+        self.navigationItem.leftBarButtonItem = self.navigationItem.backBarButtonItem;
     }
     
     override func viewDidLoad() {

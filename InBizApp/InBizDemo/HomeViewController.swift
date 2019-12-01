@@ -116,6 +116,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enquiry") as! EnquiryViewController
         nextViewController.targetUserName = productListAarry[(indexPath?.row)!]["userName"] as? String
           self.show(nextViewController, sender: self)
+//        self.present(nextViewController, animated:true, completion:nil)
     }
     
     @IBAction func FollowAction(_ sender: Any) {
