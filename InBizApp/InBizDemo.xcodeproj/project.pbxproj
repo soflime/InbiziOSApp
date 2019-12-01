@@ -34,6 +34,7 @@
 		F194E34D238B7BEA0080B106 /* TableViewCell2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F194E34C238B7BEA0080B106 /* TableViewCell2.swift */; };
 		F194E34F238B81030080B106 /* TableViewCell3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F194E34E238B81030080B106 /* TableViewCell3.swift */; };
 		F1978BEB2390EE7D0019C480 /* SideMenuTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1978BEA2390EE7D0019C480 /* SideMenuTableViewController.swift */; };
+		F1D957D72394508200A17DB7 /* CommentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D957D62394508200A17DB7 /* CommentViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		F194E34C238B7BEA0080B106 /* TableViewCell2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell2.swift; sourceTree = "<group>"; };
 		F194E34E238B81030080B106 /* TableViewCell3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell3.swift; sourceTree = "<group>"; };
 		F1978BEA2390EE7D0019C480 /* SideMenuTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideMenuTableViewController.swift; sourceTree = "<group>"; };
+		F1D957D62394508200A17DB7 /* CommentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +119,7 @@
 				83FE754B22F7F7A1002F3E16 /* ViewController.swift */,
 				83FE754D22F7F7A1002F3E16 /* Main.storyboard */,
 				F194E34E238B81030080B106 /* TableViewCell3.swift */,
+				F1D957D62394508200A17DB7 /* CommentViewController.swift */,
 				F194E34C238B7BEA0080B106 /* TableViewCell2.swift */,
 				F194E34A238B7B130080B106 /* TableViewCell1.swift */,
 				F194E348238B76560080B106 /* EnquiryViewController.swift */,
@@ -305,6 +308,7 @@
 				D3D11C9C231CFF9300C67F15 /* MyAccount.swift in Sources */,
 				838EC3F1231AA7E500C8E498 /* LoginViewController.swift in Sources */,
 				838EC3EA231AA7C700C8E498 /* HomeViewController.swift in Sources */,
+				F1D957D72394508200A17DB7 /* CommentViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
