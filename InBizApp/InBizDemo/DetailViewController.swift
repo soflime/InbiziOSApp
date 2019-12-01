@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 class DetailViewController: UIViewController {
     
@@ -24,6 +25,10 @@ class DetailViewController: UIViewController {
     var productSpecification: String!
     var productDescription: String!
     var productPrice: String!
+    
+    var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
+    
+    var commentListAarry = [[String:Any]]()
     
     @IBOutlet weak var iDisplayImage: UIImageView!
     
@@ -49,6 +54,9 @@ class DetailViewController: UIViewController {
         
 //        productDetailsTableView.delegate = self
 //        productDetailsTableView.dataSource = self
+        
+       // fetching all comments
+        getComments()
 
     }
    
@@ -57,7 +65,41 @@ class DetailViewController: UIViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
+    
+    func showSpiner() -> Void {
+           self.activityIndicator.startAnimating()
+    
+       }
+       
+       func hideSpiner() -> Void {
+           self.activityIndicator.stopAnimating()
+       }
+
+    func getComments() {
+        showSpiner()
+        // fetch and change the state of data
+        let dispatchQueue = DispatchQueue.init(label: "myQueue", qos: .background)
+        dispatchQueue.async {
+            Alamofire.request("http://tst5.jvmhost.net/Inbiz/comments/5", method: .get, encoding: JSONEncoding.default, headers: nil)
+                .responseJSON { response in
+                    if let data = response.result.value as? [[String:Any]]{
+                       self.hideSpiner()
+                        
+                        self.commentListAarry = data
+                        
+    
+    //                    self.tableViewCars?.reloadData()
+                    }
+            }
+            
+        }
+        
+    }
+    
 }
+
+
+
 
 extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
     
@@ -107,6 +149,8 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
 
 
     }
+    
+
 
 
 }
