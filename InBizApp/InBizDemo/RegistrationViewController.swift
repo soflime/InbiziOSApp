@@ -36,6 +36,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     var emailId: String!
     var password: String!
     var confirmPassword: String!
+    var customerType:String!
     var supliername: String!
     
     
@@ -105,6 +106,15 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     @objc func dissmisskeyboard()
     {
         view.endEditing(true)
+        
+        if selectedCategory != nil {
+            pickerTextField.text = selectedCategory
+            
+        }
+        else{
+            pickerTextField.text = pickerData[0]
+        }
+        
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -158,6 +168,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         emailId = emailTextField.text!
         password = passwordTextField.text!
         confirmPassword = confirmPasswordTextField.text!
+        customerType = pickerTextField.text!
         
         UserDefaults.standard.set(username, forKey: "username")
         UserDefaults.standard.set(emailId, forKey: "email")
@@ -170,7 +181,13 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         
         showSpiner()
         
-        client.MakeRequest(parameters: ["firstname": firstname,"lastname": lastname ,"age":"38","userId":username,"mobile":"999999999","password":password,"userType":supliername], url: "http://tst5.jvmhost.net/Inbiz/createUser", method: .post)
+        if(customerType == "Manufacturer/Supplier"){
+            firstname = supliername
+            lastname = ""
+        }
+       
+        
+        client.MakeRequest(parameters: ["firstname": firstname,"lastname": lastname,"email": emailId ,"age":"38","userId":username,"mobile":"999999999","password":password,"userType":customerType], url: "http://tst5.jvmhost.net/Inbiz/createUser", method: .post)
       
     }
     
