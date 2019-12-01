@@ -104,6 +104,19 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func enquireAction(_ sender: Any) {
+        
+        let cell = (sender as AnyObject).superview?.superview as? TableViewCell
+        
+        let indexPath = tableViewCars?.indexPath(for: cell!) as NSIndexPath?
+        
+//        print(cell,ind)
+        
+        let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+        let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Enquiry") as! EnquiryViewController
+        nextViewController.targetUserName = productListAarry[(indexPath?.row)!]["userName"] as? String
+          self.show(nextViewController, sender: self)
+    }
     
     @IBAction func FollowAction(_ sender: Any) {
         

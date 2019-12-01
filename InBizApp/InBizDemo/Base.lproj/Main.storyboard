@@ -376,7 +376,7 @@
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <state key="normal" title="Enquire"/>
                                                     <connections>
-                                                        <segue destination="DEm-Gw-wlv" kind="show" id="AUY-vF-kX7"/>
+                                                        <action selector="enquireAction:" destination="PMB-ZL-TiI" eventType="touchUpInside" id="VqD-m1-9A3"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -978,7 +978,7 @@
         <!--Product Enquiry-->
         <scene sceneID="hx9-o4-ayw">
             <objects>
-                <viewController id="GnT-cM-HN8" customClass="EnquiryViewController" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Enquiry" useStoryboardIdentifierAsRestorationIdentifier="YES" id="GnT-cM-HN8" customClass="EnquiryViewController" customModule="InBizDemo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KgC-rZ-fZx">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1028,11 +1028,7 @@
                         <viewLayoutGuide key="safeArea" id="IPb-Mx-PUY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Product Enquiry" id="5WC-p3-GLO">
-                        <barButtonItem key="leftBarButtonItem" id="Ivf-zE-rVo">
-                            <connections>
-                                <segue destination="PMB-ZL-TiI" kind="show" id="08l-xg-Czc"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="leftBarButtonItem" id="Ivf-zE-rVo"/>
                     </navigationItem>
                     <connections>
                         <outlet property="emailBtn" destination="baD-sX-Fx0" id="VJT-Mw-4fo"/>
@@ -1136,25 +1132,6 @@
             </objects>
             <point key="canvasLocation" x="5511.1999999999998" y="486.20689655172418"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="97l-42-uGb">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="DEm-Gw-wlv" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationItem key="navigationItem" id="WTv-hd-mkm"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="U8g-75-M7o">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="GnT-cM-HN8" kind="relationship" relationship="rootViewController" id="hc7-E9-hRW"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="xmG-H3-H53" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="6273" y="-1131"/>
-        </scene>
         <!--Registration-->
         <scene sceneID="Q0D-3j-23v">
             <objects>
@@ -1181,7 +1158,4 @@
         <image name="menu_icon" width="25" height="25"/>
         <image name="second" width="30" height="30"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="08l-xg-Czc"/>
-    </inferredMetricsTieBreakers>
 </document>
