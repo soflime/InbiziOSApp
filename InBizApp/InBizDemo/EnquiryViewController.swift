@@ -9,14 +9,20 @@
 import UIKit
 
 class EnquiryViewController: UIViewController {
-
+    @IBOutlet weak var emailSubject: UITextField!
+    
+    @IBOutlet weak var emailBtn: UIButton!
+    @IBOutlet weak var enquiryTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.emailBtn.layer.cornerRadius = 15
+       
     }
     
-
+    @IBAction func emailBtnAction(_ sender: Any) {
+    }
+    
     /*
     // MARK: - Navigation
 

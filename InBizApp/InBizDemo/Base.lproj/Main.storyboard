@@ -68,7 +68,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="2Ib-ik-VD2">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="607"/>
                                 <color key="backgroundColor" red="0.1960784314" green="0.58431372550000005" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell1" rowHeight="100" id="7eJ-Z5-FF5" customClass="TableViewCell1" customModule="InBizDemo" customModuleProvider="target">
@@ -262,12 +262,28 @@
                                     <outlet property="delegate" destination="SL6-Cn-ynd" id="pV0-sA-Rhr"/>
                                 </connections>
                             </tableView>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Y8k-Sk-hhp">
+                                <rect key="frame" x="275" y="617" width="90" height="40"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="Jpg-nd-kt3"/>
+                                    <constraint firstAttribute="height" constant="40" id="OQZ-iq-qbz"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="90" id="dCa-lV-roZ"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="40" id="p4p-oc-nWu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Post">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.19607843137254902" green="0.58431372549019611" blue="0.9882352941176471" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="Y8k-Sk-hhp" firstAttribute="top" secondItem="2Ib-ik-VD2" secondAttribute="bottom" constant="10" id="C23-On-fHk"/>
                             <constraint firstItem="2Ib-ik-VD2" firstAttribute="trailing" secondItem="JMM-Vm-0Ib" secondAttribute="trailing" id="DBe-BD-SY9"/>
+                            <constraint firstItem="JMM-Vm-0Ib" firstAttribute="trailing" secondItem="Y8k-Sk-hhp" secondAttribute="trailing" constant="10" id="GSf-AW-VA6"/>
                             <constraint firstItem="2Ib-ik-VD2" firstAttribute="leading" secondItem="JMM-Vm-0Ib" secondAttribute="leading" id="Ppx-PD-uCN"/>
-                            <constraint firstItem="2Ib-ik-VD2" firstAttribute="bottom" secondItem="JMM-Vm-0Ib" secondAttribute="bottom" id="VCQ-Td-ABP"/>
+                            <constraint firstItem="2Ib-ik-VD2" firstAttribute="bottom" secondItem="JMM-Vm-0Ib" secondAttribute="bottom" constant="-60" id="VCQ-Td-ABP"/>
                             <constraint firstItem="2Ib-ik-VD2" firstAttribute="top" secondItem="JMM-Vm-0Ib" secondAttribute="top" id="sjR-Vd-WgE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="JMM-Vm-0Ib"/>
@@ -967,68 +983,66 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="user@abc.com" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FLM-oF-5J6">
-                                <rect key="frame" x="83" y="88" width="261" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter subject here " textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="69v-RK-iaH">
-                                <rect key="frame" x="83" y="144" width="261" height="34"/>
+                                <rect key="frame" x="84" y="113" width="260" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="mOs-Pt-4sh">
-                                <rect key="frame" x="82" y="225" width="261" height="128"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Please enter enquiry details" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="mOs-Pt-4sh">
+                                <rect key="frame" x="83" y="194" width="261" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="baD-sX-Fx0">
-                                <rect key="frame" x="294" y="362" width="50" height="40"/>
+                                <rect key="frame" x="274" y="360" width="70" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Email"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Email">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <connections>
+                                    <action selector="emailBtnAction:" destination="GnT-cM-HN8" eventType="touchUpInside" id="2zI-wu-wkn"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FXv-X9-ifL">
-                                <rect key="frame" x="16" y="95" width="40" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Subject" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RNk-Xk-5Jd">
-                                <rect key="frame" x="16" y="150" width="59" height="21"/>
+                                <rect key="frame" x="17" y="119" width="63" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enquiry Detail" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x53-WB-uNA">
-                                <rect key="frame" x="16" y="202" width="106" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enquiry Details" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x53-WB-uNA">
+                                <rect key="frame" x="17" y="171" width="124" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.1960784314" green="0.58431372550000005" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="tintColor" red="0.1960784314" green="0.58431372550000005" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                         <viewLayoutGuide key="safeArea" id="IPb-Mx-PUY"/>
                     </view>
                     <navigationItem key="navigationItem" title="Product Enquiry" id="5WC-p3-GLO">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="Ivf-zE-rVo">
+                        <barButtonItem key="leftBarButtonItem" id="Ivf-zE-rVo">
                             <connections>
                                 <segue destination="PMB-ZL-TiI" kind="show" id="08l-xg-Czc"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailBtn" destination="baD-sX-Fx0" id="VJT-Mw-4fo"/>
+                        <outlet property="emailSubject" destination="69v-RK-iaH" id="khW-fY-LUl"/>
+                        <outlet property="enquiryTextView" destination="mOs-Pt-4sh" id="6Yn-5R-8kB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e9v-Ef-04P" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="7206" y="-1091"/>
+            <point key="canvasLocation" x="7205.6000000000004" y="-1091.6041979010495"/>
         </scene>
         <!--Side Menu Table View Controller-->
         <scene sceneID="tgi-Ew-zqv">
@@ -1168,7 +1182,6 @@
         <image name="second" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="AUY-vF-kX7"/>
         <segue reference="08l-xg-Czc"/>
     </inferredMetricsTieBreakers>
 </document>
