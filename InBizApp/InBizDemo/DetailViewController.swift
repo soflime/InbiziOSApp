@@ -18,6 +18,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var txtProductCategory: UILabel!
     @IBOutlet weak var txtViewProductSpecification: UITextView!
     
+    @IBOutlet weak var postBtn: UIButton!
     @IBOutlet weak var productSpacificationLbl: UILabel!
     var strImageName: String!
     var productName: String!
@@ -57,6 +58,10 @@ class DetailViewController: UIViewController {
         
        // fetching all comments
         getComments()
+        
+        self.postBtn.layer.cornerRadius = 15
+        
+    
 
     }
    
