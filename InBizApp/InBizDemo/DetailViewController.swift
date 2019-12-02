@@ -92,6 +92,7 @@ class DetailViewController: UIViewController {
                         
                         self.commentListAarry = data
                         
+                        
     
     //                    self.tableViewCars?.reloadData()
                     }
@@ -113,7 +114,14 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        
+        if section == 2 {
+            return self.commentListAarry.count
+        }
+        else{
+            return 1
+        }
+
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -141,6 +149,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
                 return cell
         case 2:
                     let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! TableViewCell3
+//                    cell.commentLbl.text = self.commentListAarry[]
                     return cell
         default:
             return UITableViewCell()
