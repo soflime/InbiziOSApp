@@ -284,6 +284,7 @@
                     <navigationItem key="navigationItem" title="Product Details" id="3ss-4n-3Sv"/>
                     <connections>
                         <outlet property="postBtn" destination="Y8k-Sk-hhp" id="S9o-do-U4U"/>
+                        <outlet property="productDetailTbl" destination="2Ib-ik-VD2" id="CJf-Cs-1OP"/>
                         <outlet property="productSpacificationLbl" destination="bEO-vc-mvk" id="DLJ-HG-KnD"/>
                         <outlet property="txtProductCategory" destination="89N-ID-8cM" id="8Gt-fC-4ng"/>
                         <outlet property="txtProductName" destination="4oX-0V-MUF" id="ohe-tz-4Zf"/>

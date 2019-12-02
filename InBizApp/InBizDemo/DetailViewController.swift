@@ -13,7 +13,8 @@ class DetailViewController: UIViewController {
     
 //    let CellId = "Cell"
     
-
+    @IBOutlet weak var productDetailTbl: UITableView!
+    
     @IBOutlet weak var txtProductName: UILabel!
     @IBOutlet weak var txtProductCategory: UILabel!
     @IBOutlet weak var txtViewProductSpecification: UITextView!
@@ -91,10 +92,8 @@ class DetailViewController: UIViewController {
                        self.hideSpiner()
                         
                         self.commentListAarry = data
-                        
-                        
-    
-    //                    self.tableViewCars?.reloadData()
+                        self.productDetailTbl?.reloadData()
+   
                     }
             }
             
@@ -149,7 +148,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
                 return cell
         case 2:
                     let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! TableViewCell3
-//                    cell.commentLbl.text = self.commentListAarry[]
+                    cell.commentLbl.text = self.commentListAarry[indexPath.row]["comment"] as? String
                     return cell
         default:
             return UITableViewCell()
