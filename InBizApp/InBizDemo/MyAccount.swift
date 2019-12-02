@@ -10,6 +10,7 @@ import UIKit
 
 class MyAccount: UIViewController {
     
+    @IBOutlet weak var firstLastNameLbl: UILabel!
     
     @IBOutlet weak var signInmessge: UILabel!
     @IBOutlet weak var emailText: UILabel!
@@ -30,8 +31,11 @@ class MyAccount: UIViewController {
         
         if(UserDefaults.standard.bool(forKey: "userlogin")) {
             myAccountView.isHidden = false
-            signInmessge.isHidden = true
-            usernameText.text = UserDefaults.standard.string(forKey: "username") ?? "username"
+            signInmessge.isHidden = true  //lastname
+            let firstName = UserDefaults.standard.string(forKey: "username") ?? "username"
+            let lastName =  UserDefaults.standard.string(forKey: "lastname") ?? "lastname"
+            firstLastNameLbl.text = String(format: "%@ %@", firstName, lastName)
+            usernameText.text = firstName
             emailText.text =  UserDefaults.standard.string(forKey: "email") ?? "usrname@gmail.com"
             enterprise.text = UserDefaults.standard.string(forKey: "supliername") ?? "Consumer"
         }

@@ -8,6 +8,7 @@
 
 import UIKit
 
+
 class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPickerViewDataSource,HTTRsponseDelegate, UITextFieldDelegate {
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
@@ -180,6 +181,8 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         }
         
         showSpiner()
+        
+        UserDefaults.standard.set(lastname, forKey: "lastname")
         
         if(customerType == "Manufacturer/Supplier"){
             firstname = supliername

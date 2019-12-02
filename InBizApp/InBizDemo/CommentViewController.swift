@@ -25,19 +25,15 @@ class CommentViewController: UIViewController,HTTRsponseDelegate {
     }
     
     @IBAction func commentBtnAction(_ sender: Any) {
-        
          if (commentTextfield.text ?? "").isEmpty {
              Utility.alert(title: nil, message: emptyUserName, target: self)
              return
          }
          
-          client.delegate = self
-        
-        
-         comment = commentTextfield.text
+        client.delegate = self
+        comment = commentTextfield.text
          
-         
-         if (comment != nil) {
+       if (comment != nil) {
              
 //             UserDefaults.standard.set(userId, forKey: "username")
              
@@ -78,8 +74,10 @@ class CommentViewController: UIViewController,HTTRsponseDelegate {
             if (code == 200) {
                 print("commented Successful!")
                 
-                self.dismiss(animated: true, completion: nil)
+                Utility.alert(title: nil, message:"Comment posted !" , target: self)
                 
+               // self.dismiss(animated: true, completion: nil)
+//
 //                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
 //                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
 //    //            self.present(nextViewController, animated:true, completion:nil)
