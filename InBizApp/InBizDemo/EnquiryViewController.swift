@@ -42,11 +42,11 @@ class EnquiryViewController: UIViewController,HTTRsponseDelegate {
     @IBAction func emailBtnAction(_ sender: Any) {
         
          if (emailSubject.text ?? "").isEmpty {
-             Utility.alert(title: nil, message: emptyUserName, target: self)
+             Utility.alert(title: nil, message: errorMsg, target: self)
              return
          } else if (enquiryTextView.text ?? "").isEmpty {
              
-             Utility.alert(title: nil, message: emptyPassword, target: self)
+             Utility.alert(title: nil, message: errorMsg, target: self)
              return
          }
          

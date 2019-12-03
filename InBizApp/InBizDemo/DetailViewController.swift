@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var productSpacificationLbl: UILabel!
     var strImageName: String!
     var productName: String!
+    var productId: Int!
     var productCategory: String!
     var productSpecification: String!
     var productDescription: String!
@@ -86,7 +87,7 @@ class DetailViewController: UIViewController {
         // fetch and change the state of data
         let dispatchQueue = DispatchQueue.init(label: "myQueue", qos: .background)
         dispatchQueue.async {
-            Alamofire.request("http://tst5.jvmhost.net/Inbiz/comments/5", method: .get, encoding: JSONEncoding.default, headers: nil)
+            Alamofire.request("http://tst5.jvmhost.net/Inbiz/comments/\(self.productId ?? 1)", method: .get, encoding: JSONEncoding.default, headers: nil)
                 .responseJSON { response in
                     if let data = response.result.value as? [[String:Any]]{
                        self.hideSpiner()
@@ -99,6 +100,16 @@ class DetailViewController: UIViewController {
             
         }
         
+    }
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is CommentViewController
+        {
+            let vc = segue.destination as? CommentViewController
+            vc?.productId = self.productId
+        }
     }
     
 }
@@ -149,6 +160,12 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
         case 2:
                     let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! TableViewCell3
                     cell.commentLbl.text = self.commentListAarry[indexPath.row]["comment"] as? String
+                    if indexPath.row == 0{
+                        cell.titleLbl.text = "Product Comments"
+                    }
+                    else{
+                        cell.titleLbl.isHidden = true
+                    }
                     return cell
         default:
             return UITableViewCell()

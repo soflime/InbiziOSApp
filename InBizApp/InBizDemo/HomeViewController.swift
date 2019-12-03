@@ -220,6 +220,7 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
+        nextViewController.productId =     productListAarry[indexPath.row]["productId"] as? Int
         nextViewController.productName = productListAarry[indexPath.row]["productName"] as? String
         nextViewController.productSpecification = productListAarry[indexPath.row]["productDimension"] as? String
         nextViewController.productCategory = productListAarry[indexPath.row]["productCategory"] as? String

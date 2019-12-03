@@ -16,7 +16,7 @@ class CommentViewController: UIViewController,HTTRsponseDelegate {
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     let client = HTTPClient()
     var comment: String!
-    var productId: String!
+    var productId: Int!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ class CommentViewController: UIViewController,HTTRsponseDelegate {
     
     @IBAction func commentBtnAction(_ sender: Any) {
          if (commentTextfield.text ?? "").isEmpty {
-             Utility.alert(title: nil, message: emptyUserName, target: self)
+             Utility.alert(title: nil, message: "Please enter comment", target: self)
              return
          }
          
@@ -39,7 +39,7 @@ class CommentViewController: UIViewController,HTTRsponseDelegate {
              
              showSpiner()
          
-             client.MakeRequest(parameters: ["productId":"5", "comments":comment], url: "http://tst5.jvmhost.net/Inbiz/comment", method: .post)
+             client.MakeRequest(parameters: ["productId":productId, "comments":comment], url: "http://tst5.jvmhost.net/Inbiz/comment", method: .post)
          }
     }
     
@@ -66,22 +66,16 @@ class CommentViewController: UIViewController,HTTRsponseDelegate {
             guard let code = data["httpstatus"] as? NSInteger else {
                 
                 self.view.makeToast(data["response"] as? String)
-                
-//                Utility.alert(title: nil, message:loginErrorMsg , target: self)
+            
                 return
             }
             
             if (code == 200) {
-                print("commented Successful!")
-                
-                Utility.alert(title: nil, message:"Comment posted !" , target: self)
-                
-               // self.dismiss(animated: true, completion: nil)
-//
-//                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-//                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! DetailViewController
-//    //            self.present(nextViewController, animated:true, completion:nil)
-//                self.show(nextViewController, sender: self)
+
+                navigationController?.popViewController(animated: true)
+
+                dismiss(animated: true, completion: nil)
+
             }
            
         }
