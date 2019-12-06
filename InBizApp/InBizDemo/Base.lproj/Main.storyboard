@@ -296,20 +296,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3eB-Aa-jh4">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3eB-Aa-jh4">
                                 <rect key="frame" x="10" y="59" width="355" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3dh-qN-Q7O">
-                                <rect key="frame" x="154" y="123" width="67" height="30"/>
-                                <state key="normal" title="Comment"/>
+                                <rect key="frame" x="142.5" y="123" width="90" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="90" id="heO-uW-ZgD"/>
+                                </constraints>
+                                <state key="normal" title="Comment">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
                                 <connections>
                                     <action selector="commentBtnAction:" destination="dig-SL-UBd" eventType="touchUpInside" id="20a-sS-DQE"/>
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.1960784314" green="0.58431372550000005" blue="0.98823529409999999" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="vdT-cu-5zv" firstAttribute="trailing" secondItem="3eB-Aa-jh4" secondAttribute="trailing" constant="10" id="H9x-yL-GEd"/>
                             <constraint firstItem="3dh-qN-Q7O" firstAttribute="top" secondItem="3eB-Aa-jh4" secondAttribute="bottom" constant="30" id="U8Z-af-rZR"/>
@@ -321,6 +327,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="2G0-68-nZJ"/>
                     <connections>
+                        <outlet property="commentBtn" destination="3dh-qN-Q7O" id="89l-Xl-Wnr"/>
                         <outlet property="commentTextfield" destination="3eB-Aa-jh4" id="VMf-5s-tnw"/>
                     </connections>
                 </viewController>

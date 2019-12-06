@@ -12,6 +12,7 @@ class CommentViewController: UIViewController,HTTRsponseDelegate {
 
     @IBOutlet weak var commentTextfield: UITextField!
     
+    @IBOutlet weak var commentBtn: UIButton!
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     let client = HTTPClient()
@@ -21,7 +22,8 @@ class CommentViewController: UIViewController,HTTRsponseDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.commentBtn.layer.cornerRadius = 15
+       
     }
     
     @IBAction func commentBtnAction(_ sender: Any) {
