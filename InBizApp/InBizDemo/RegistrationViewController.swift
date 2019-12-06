@@ -135,29 +135,29 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     @IBAction func registrationButtonAction(_ sender: Any) {
         
         if (emailTextField.text ?? "").isEmpty {
-            Utility.alert(title: nil, message: "Please enter email", target: self)
+            Utility.alert(title: nil, message: errorMsg, target: self)
             return
         } else if (userTextField.text ?? "").isEmpty {
-            Utility.alert(title: nil, message: "Please enter email", target: self)
+            Utility.alert(title: nil, message: errorMsg, target: self)
             return
         } else if (fnameTextField.text ?? "").isEmpty && !fnameTextField.isHidden{
-            Utility.alert(title: nil, message: "Please enter first name", target: self)
+            Utility.alert(title: nil, message: errorMsg, target: self)
             return
         } else if (lnameTextField.text ?? "").isEmpty && !lnameTextField.isHidden {
             
-            Utility.alert(title: nil, message: "Please enter last name", target: self)
+            Utility.alert(title: nil, message: errorMsg, target: self)
             return
         } else if (passwordTextField.text ?? "").isEmpty {
             
-            Utility.alert(title: nil, message: "Please enter password", target: self)
+            Utility.alert(title: nil, message: errorMsg, target: self)
             return
         } else if (confirmPasswordTextField.text ?? "").isEmpty {
             
-            Utility.alert(title: nil, message: "Please enter confirm password", target: self)
+            Utility.alert(title: nil, message: errorMsg, target: self)
             return
         } else if (supliernameTextField.text ?? "").isEmpty && !supliernameTextField.isHidden{
             
-           Utility.alert(title: nil, message: "Please enter suplier name", target: self)
+           Utility.alert(title: nil, message: errorMsg, target: self)
            return
         }
         
