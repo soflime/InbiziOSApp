@@ -86,7 +86,7 @@ class PostFormViewController: UIViewController, HTTRsponseDelegate, UITextFieldD
         
       let username = UserDefaults.standard.string(forKey: "username")
         
-        let parameter = ["productName":productName, "productCompanyName":"NA", "productPrice":productPrice,"userName":username, "productCategory":productCategory, "productDescription":productDesription,"productDimension":productSpecification]
+        let parameter = ["productName":productName, "productCompanyName":"NA", "productPrice":productPrice,"userName":username, "productCategory":productCategory, "productDescription":productDesription,"productDimension":productSpecification,"userType":userTypeStr ,"userWebUrl":webUrl ]
         
         showSpiner()
         client.MakeRequest(parameters: parameter as [String : Any], url: "http://tst5.jvmhost.net/Inbiz/postProduct",method: .post)

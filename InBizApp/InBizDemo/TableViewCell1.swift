@@ -19,6 +19,8 @@ class TableViewCell1: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+//        productOwnerEmail.dataDetectorTypes = .link
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
