@@ -28,6 +28,8 @@ class DetailViewController: UIViewController {
     var productSpecification: String!
     var productDescription: String!
     var productPrice: String!
+    var productOwnerType: String!
+    var productOwnerEmail: String!
     
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     
@@ -152,6 +154,8 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
             cell.productNameLbl.text = productName ?? ""
             cell.productCategoryLbl.text = productCategory ?? ""
             cell.productSummaryLbl.text = productSpecification ?? ""
+            cell.productOwnerType.text = productOwnerType ?? ""
+            cell.productOwnerEmail.text = productOwnerEmail ?? ""
             return cell
         case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! TableViewCell2

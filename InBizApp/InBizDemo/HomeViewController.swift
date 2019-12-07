@@ -147,6 +147,10 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
 
 
         }}))
+        
+         getProductList()
+        self.tableViewCars?.reloadData()
+        
         self.present(alert, animated: true, completion: nil)
         
     }
@@ -225,6 +229,8 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         nextViewController.productSpecification = productListAarry[indexPath.row]["productDimension"] as? String
         nextViewController.productCategory = productListAarry[indexPath.row]["productCategory"] as? String
         nextViewController.productDescription = productListAarry[indexPath.row]["productDescription"] as? String
+        nextViewController.productOwnerType = productListAarry[indexPath.row]["userType"] as? String
+        nextViewController.productOwnerEmail = productListAarry[indexPath.row]["userWebUrl"] as? String
         
 //        self.present(nextViewController, animated: true, completion: nil)
 //        func show(_ vc: UIViewController,

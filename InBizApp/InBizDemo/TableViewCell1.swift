@@ -13,6 +13,9 @@ class TableViewCell1: UITableViewCell {
     @IBOutlet weak var productNameLbl: UILabel!
     @IBOutlet weak var productCategoryLbl: UILabel!
     @IBOutlet weak var productSummaryLbl: UILabel!
+    @IBOutlet weak var productOwnerType: UILabel!
+    
+    @IBOutlet weak var productOwnerEmail: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
