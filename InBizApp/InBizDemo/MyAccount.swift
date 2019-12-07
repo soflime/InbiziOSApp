@@ -15,10 +15,13 @@ class MyAccount: UIViewController {
     @IBOutlet weak var signInmessge: UILabel!
     @IBOutlet weak var emailText: UILabel!
     @IBOutlet weak var enterprise: UILabel!
+    @IBOutlet weak var enterpriceTitle: UILabel!
     
     @IBOutlet weak var usernameText: UILabel!
     @IBOutlet var myAccountView: UIView!
+    @IBOutlet weak var webUrlTitleLbl: UILabel!
     
+    @IBOutlet weak var webUrlTextLbl: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,13 +36,25 @@ class MyAccount: UIViewController {
             myAccountView.isHidden = false
             signInmessge.isHidden = true  //lastname
             let firstName = UserDefaults.standard.string(forKey: "username") ?? "username"
-            ////            let firstName = yourVariable
-            //            let lastName =  UserDefaults.standard.string(forKey: "lastname") ?? "lastname"
             firstLastNameLbl.text = String(format: "%@ %@", usrfname, usrlname)
             usernameText.text = firstName
             emailText.text =  UserDefaults.standard.string(forKey: "email") ?? "usrname@gmail.com"
-            //            enterprise.text = UserDefaults.standard.string(forKey: "supliername") ?? "Consumer"
             enterprise.text = userTypeStr
+            
+            if (userTypeStr == "Consumer") {
+                webUrlTextLbl.isHidden = true
+                webUrlTitleLbl.isHidden = true
+                
+                enterprise.frame.origin.y -= 30
+                enterpriceTitle.frame.origin.y -= 30
+                
+            }
+            else{
+                webUrlTextLbl.isHidden = false
+                webUrlTitleLbl.isHidden = false
+                
+                webUrlTextLbl.text = webUrl
+            }
             
         }
         else {

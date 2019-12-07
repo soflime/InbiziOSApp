@@ -16,6 +16,8 @@ var userType: String!
 var userTypeStr = ""
 var usrfname = " "
 var usrlname = " "
+var webUrl = " "
+
 class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var useridField: UITextField!
@@ -142,9 +144,14 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
             return
         }
         
+        guard let weburlstr = data["mobile"] as? String else {
+            return
+        }
+        
         userTypeStr = usrTyp
         usrfname = usrfirstname
         usrlname = usrlastname
+        webUrl = weburlstr
         
   
         guard let code = data["statusCode"] as? NSInteger else {
