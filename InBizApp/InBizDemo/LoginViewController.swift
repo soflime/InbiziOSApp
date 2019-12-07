@@ -11,7 +11,11 @@ import UIKit
 let loginErrorMsg = "Invalid Credentials. Kindly check user name and password "
 let emptyUserName = "Please enter user name"
 let emptyPassword = "Please enter password"
+var userType: String!
 
+var userTypeStr = ""
+var usrfname = " "
+var usrlname = " "
 class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var useridField: UITextField!
@@ -23,6 +27,7 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
     var activityIndicator: UIActivityIndicatorView = UIActivityIndicatorView()
     var userId: String!
     var pwd: String!
+    var userType : String!
     let client = HTTPClient()
     
     override func viewDidLoad() {
@@ -124,8 +129,24 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
         
 
         hideSpiner()
-       
         
+        guard let usrTyp = data["usertype"] as? String else {
+            return
+        }
+        
+        guard let usrfirstname = data["firstname"] as? String else {
+            return
+        }
+        
+        guard let usrlastname = data["lastname"] as? String else {
+            return
+        }
+        
+        userTypeStr = usrTyp
+        usrfname = usrfirstname
+        usrlname = usrlastname
+        
+  
         guard let code = data["statusCode"] as? NSInteger else {
             
             self.view.makeToast(data["response"] as? String)
@@ -137,6 +158,7 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
         if (code == 200) {
             print("Login Successful!")
             UserDefaults.standard.set(true, forKey: "userlogin")
+            UserDefaults.standard.set("Manufature" , forKey: "userType")
             UserDefaults.standard.synchronize()
             self.tabBarController?.selectedIndex = 0
             

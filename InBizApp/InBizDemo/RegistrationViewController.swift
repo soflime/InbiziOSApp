@@ -27,6 +27,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     
     @IBOutlet weak var supliernameTextField: UITextField!
     
+    @IBOutlet weak var bussinessUrl: UITextField!
     @IBOutlet weak var btnSubmit: UIButton!
     
     var firstname: String!
@@ -39,6 +40,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     var confirmPassword: String!
     var customerType:String!
     var supliername: String!
+    var websiteUrl :String!
     
     
     
@@ -59,7 +61,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
     override func viewDidLoad() {
         super.viewDidLoad()
         self.btnSubmit.layer.cornerRadius = 15
-        pickerData = ["Consumer","Manufacturer/Supplier"]
+        pickerData = ["Consumer","Manufacturer/Supplier","Individual","Services","Bussiness Seller"]
 //        self.picker.delegate = self
 //        self.picker.dataSource = self
         addSpiner()
@@ -67,6 +69,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
 //        supliernameTextField.text = pickerData[0]
         if pickerData[0] == "Consumer" {
             supliernameTextField.isHidden = true
+            bussinessUrl.isHidden = true
         }
         
         
@@ -170,10 +173,12 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         password = passwordTextField.text!
         confirmPassword = confirmPasswordTextField.text!
         customerType = pickerTextField.text!
+        websiteUrl = bussinessUrl.text!
         
         UserDefaults.standard.set(username, forKey: "username")
         UserDefaults.standard.set(emailId, forKey: "email")
         UserDefaults.standard.set(supliername, forKey: "supliername")
+        UserDefaults.standard.set(customerType, forKey: "customerType")
         
         if (password != nil) && (confirmPassword != nil) && (password != confirmPassword) {
             Utility.alert(title: nil, message: "Password doesn't match", target: self)
@@ -190,7 +195,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         }
        
         
-        client.MakeRequest(parameters: ["firstname": firstname,"lastname": lastname,"email": emailId ,"age":"38","userId":username,"mobile":"999999999","password":password,"userType":customerType], url: "http://tst5.jvmhost.net/Inbiz/createUser", method: .post)
+        client.MakeRequest(parameters: ["firstname": firstname,"lastname": lastname,"email": emailId ,"age":"38","userId":username,"mobile":websiteUrl,"password":password,"userType":customerType], url: "http://tst5.jvmhost.net/Inbiz/createUser", method: .post)
       
     }
     
@@ -208,11 +213,13 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
 //        supliernameTextField.text = pickerData[row]
         if pickerData[row] == "Consumer" {
             supliernameTextField.isHidden = true
+            bussinessUrl.isHidden = true
             fnameTextField.isHidden = false
             lnameTextField.isHidden = false
         }
         else {
             supliernameTextField.isHidden = false
+            bussinessUrl.isHidden = false
             supliernameTextField.frame = CGRect(x: supliernameTextField.frame.origin.x, y: fnameTextField.frame.origin.y , width: supliernameTextField.frame.size.width, height: supliernameTextField.frame.size.height)
             fnameTextField.isHidden = true
             lnameTextField.isHidden = true
@@ -253,20 +260,35 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         hideSpiner()
         guard let code = data["statusCode"] as? NSInteger else {
 //            self.view.makeToast(data["response"] as? String)
-            let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
-            //            self.present(nextViewController, animated:true, completion:nil)
-            self.show(nextViewController, sender: self)
+            
+            Utility.alert(title: nil, message: "Registered", target: self)
+            
+            DispatchQueue.main.asyncAfter(deadline: .now() + 3.0) {
+                
+                let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+                let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
+                //            self.present(nextViewController, animated:true, completion:nil)
+                self.show(nextViewController, sender: self)
+            }
+
             return
         }
         
         if (code == 200) {
             print("Registration Successful!")
             //self.dismiss(animated: true, completion: nil)
+            
+            Utility.alert(title: nil, message: "Registration Successful. Please Login!", target: self)
+            
+             DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
-            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Home") as! HomeViewController
+            let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
             //            self.present(nextViewController, animated:true, completion:nil)
             self.show(nextViewController, sender: self)
+            }
+        }
+        else{
+            Utility.alert(title: nil, message: "failed", target: self)
         }
         
     }

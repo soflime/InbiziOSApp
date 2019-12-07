@@ -161,7 +161,7 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
                     let cell = tableView.dequeueReusableCell(withIdentifier: "cell3", for: indexPath) as! TableViewCell3
                     cell.commentLbl.text = self.commentListAarry[indexPath.row]["comment"] as? String
                     if indexPath.row == 0{
-                        cell.titleLbl.text = "Product Comments"
+                        cell.titleLbl.text = "Post Comments"
                     }
                     else{
                         cell.titleLbl.isHidden = true

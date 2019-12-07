@@ -195,20 +195,20 @@ class HomeViewController: UIViewController,UIScrollViewDelegate,UICollectionView
         }
        
         let prodName = productListAarry[indexPath.row]["productName"] as? String
-        cell.lblProdName.text = "Product Name:  \(prodName!)"
+        cell.lblProdName.text = "Post Name:  \(prodName!)"
         
         let prodCat = productListAarry[indexPath.row]["productCategory"] as? String
-        cell.lblProdCategory.text = "Product Category:   \(prodCat!)"
+        cell.lblProdCategory.text = "Post Category:   \(prodCat!)"
         
         let prodSpecification = productListAarry[indexPath.row]["productDimension"] as? String
         
-        cell.lblProdSpecification.text = "Product Summary: \(prodSpecification ?? " ")"
+        cell.lblProdSpecification.text = "Post Summary: \(prodSpecification ?? " ")"
         
         let number = productListAarry[indexPath.row]["productPrice"]
        
          let price = formatter.string(from: number as! NSNumber) ?? ""
         
-        cell.lblProductPrice.text = "Product Price:   \(price)"
+        cell.lblProductPrice.text = "Price per unit:   \(price)"
         
         let numberF: NSInteger = productListAarry[indexPath.row]["productFollowerCount"] as! NSInteger
         
