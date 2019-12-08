@@ -15,6 +15,7 @@ class TableViewCell1: UITableViewCell {
     @IBOutlet weak var productSummaryLbl: UILabel!
     @IBOutlet weak var productOwnerType: UILabel!
     
+    @IBOutlet weak var linkBtn: UIButton!
     @IBOutlet weak var productOwnerEmail: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -23,6 +24,12 @@ class TableViewCell1: UITableViewCell {
         
     }
 
+    @IBAction func linkBtnAction(_ sender: Any) {
+        
+        if let link = URL(string: "https://yoursite.com") {
+          UIApplication.shared.open(link)
+        }
+    }
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

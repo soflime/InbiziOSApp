@@ -155,7 +155,11 @@ extension DetailViewController: UITableViewDelegate, UITableViewDataSource{
             cell.productCategoryLbl.text = productCategory ?? ""
             cell.productSummaryLbl.text = productSpecification ?? ""
             cell.productOwnerType.text = productOwnerType ?? ""
-            cell.productOwnerEmail.text = productOwnerEmail ?? ""
+            //cell.productOwnerEmail.text = productOwnerEmail ?? ""
+            //cell.linkBtn.titleLabel?.text = productOwnerEmail ?? ""
+            cell.linkBtn.setTitle(productOwnerEmail ?? "", for: .normal)
+//            cell.linkBtn.setAttributedTitle(productOwnerEmail ?? "", for: .normal)
+            
             return cell
         case 1:
                 let cell = tableView.dequeueReusableCell(withIdentifier: "cell2", for: indexPath) as! TableViewCell2
