@@ -37,6 +37,14 @@ class DetailViewController: UIViewController {
     
     @IBOutlet weak var iDisplayImage: UIImageView!
     
+    
+    override func viewWillAppear(_ animated: Bool) {
+        
+        // fetching all comments
+        getComments()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -60,8 +68,7 @@ class DetailViewController: UIViewController {
 //        productDetailsTableView.delegate = self
 //        productDetailsTableView.dataSource = self
         
-       // fetching all comments
-        getComments()
+       
         
         self.postBtn.layer.cornerRadius = 15
         
