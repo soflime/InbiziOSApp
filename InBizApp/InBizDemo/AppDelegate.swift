@@ -15,11 +15,44 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     var window: UIWindow?
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if(UserDefaults.standard.bool(forKey: "loggedIn")){
+         
+
+        let initialViewController = storyboard.instantiateViewController(withIdentifier: "Home")
+            
+            let navigationController = UINavigationController()
+            navigationController.viewControllers = [initialViewController]
+            
+            self.window?.rootViewController = navigationController
+            self.window?.makeKeyAndVisible()
+        }else{
+            
+             
+
+            let initialViewController = storyboard.instantiateViewController(withIdentifier: "Login")
+                
+                let navigationController = UINavigationController()
+                navigationController.viewControllers = [initialViewController]
+                
+                self.window?.rootViewController = navigationController
+                self.window?.makeKeyAndVisible()
+            
+        }
+        
+        
 
         let navigationBarAppearace = UINavigationBar.appearance()
         navigationBarAppearace.tintColor = UIColor.white
         navigationBarAppearace.barTintColor = UIColor(red: 0.168, green: 0.521, blue: 0.890, alpha: 1)
         navigationBarAppearace.titleTextAttributes = [NSAttributedString.Key.foregroundColor : UIColor.white]
+        
+
        
       
         return true

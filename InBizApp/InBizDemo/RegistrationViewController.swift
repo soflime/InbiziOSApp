@@ -277,7 +277,7 @@ class RegistrationViewController: UIViewController,UIPickerViewDelegate, UIPicke
         if (code == 200) {
             print("Registration Successful!")
             //self.dismiss(animated: true, completion: nil)
-            
+            UserDefaults.standard.set(true , forKey: "loggedIn")
             Utility.alert(title: nil, message: "Registration Successful. Please Login!", target: self)
             
              DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {

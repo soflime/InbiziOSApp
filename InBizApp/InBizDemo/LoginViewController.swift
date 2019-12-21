@@ -166,6 +166,7 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
             print("Login Successful!")
             UserDefaults.standard.set(true, forKey: "userlogin")
             UserDefaults.standard.set("Manufature" , forKey: "userType")
+            UserDefaults.standard.set(true , forKey: "loggedIn")
             UserDefaults.standard.synchronize()
             self.tabBarController?.selectedIndex = 0
             

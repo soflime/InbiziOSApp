@@ -42,11 +42,18 @@ class SideMenuTableViewController: UITableViewController {
 //        print("selected row \(IndexPath.self)")
         
         if indexPath.row == 2 {
+            //remove logged in state after logout
+            let defaults = UserDefaults.standard
+            defaults.removeObject(forKey: "loggedIn")
+            defaults.synchronize()
+            
+            
             let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
             let nextViewController = storyBoard.instantiateViewController(withIdentifier: "Login") as! LoginViewController
             //            self.present(nextViewController, animated:true, completion:nil)
             self.show(nextViewController, sender: self)
         }
+        
     }
     
 }
