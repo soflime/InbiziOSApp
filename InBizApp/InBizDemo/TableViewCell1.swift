@@ -24,9 +24,13 @@ class TableViewCell1: UITableViewCell {
         
     }
 
-    @IBAction func linkBtnAction(_ sender: Any) {
+    @IBAction func linkBtnAction(_ sender: AnyObject) {
         
-        if let link = URL(string: "https://yoursite.com") {
+        let http = "https://"
+        let urlStr = sender.titleLabel?.text ?? " "
+       
+        
+        if let link = URL(string: http + urlStr) {
           UIApplication.shared.open(link)
         }
     }
