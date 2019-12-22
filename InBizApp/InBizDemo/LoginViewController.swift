@@ -153,6 +153,10 @@ class LoginViewController: UIViewController,HTTRsponseDelegate, UITextFieldDeleg
         usrlname = usrlastname
         webUrl = weburlstr
         
+        UserDefaults.standard.set(usrlname, forKey: "userlastname")
+        UserDefaults.standard.set(webUrl, forKey: "url")
+        UserDefaults.standard.set(userTypeStr, forKey: "usrType")
+        
   
         guard let code = data["statusCode"] as? NSInteger else {
             

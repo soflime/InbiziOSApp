@@ -36,10 +36,11 @@ class MyAccount: UIViewController {
             myAccountView.isHidden = false
             signInmessge.isHidden = true  //lastname
             let firstName = UserDefaults.standard.string(forKey: "username") ?? "username"
-            firstLastNameLbl.text = String(format: "%@ %@", usrfname, usrlname)
+            let lastName = UserDefaults.standard.string(forKey: "userlastname") ?? "lastname"
+            firstLastNameLbl.text = String(format: "%@ %@", firstName, lastName)
             usernameText.text = firstName
             emailText.text =  UserDefaults.standard.string(forKey: "email") ?? "usrname@gmail.com"
-            enterprise.text = userTypeStr
+            enterprise.text = UserDefaults.standard.string(forKey: "usrType") ?? "usrname@gmail.com"
             
             if (userTypeStr == "Consumer") {
                 webUrlTextLbl.isHidden = true
@@ -53,7 +54,7 @@ class MyAccount: UIViewController {
                 webUrlTextLbl.isHidden = false
                 webUrlTitleLbl.isHidden = false
                 
-                webUrlTextLbl.text = webUrl
+                webUrlTextLbl.text = UserDefaults.standard.string(forKey: "url") ?? "www.sample.com"
             }
             
         }

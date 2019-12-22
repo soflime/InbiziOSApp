@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         if(UserDefaults.standard.bool(forKey: "loggedIn")){
          
+//            UserDefaults.standard.set(true, forKey: "userlogin")
 
         let initialViewController = storyboard.instantiateViewController(withIdentifier: "Home")
             
